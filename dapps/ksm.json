@@ -1,5 +1,12 @@
 [
   {
+    "title": "Kodadot",
+    "link": "https://kodadot.xyz/",
+    "description": "NFT Explorer running on Kusama and Polkadot",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/kodadot/kodadot-presskit/main/v3/KDot.svg"
+  },
+  {
     "title": "Singular",
     "link": "https://singular.app/",
     "description": "The Official UI for the first Kusama-native NFTs",
