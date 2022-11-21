@@ -54,5 +54,12 @@
     "description": "Leonicorn Swap is an advanced AMM with features Like NFT Marketplace, Lottery, IDO and many other advanced features.",
     "isFavorites": false,
     "image": "https://dashboard-assets.dappradar.com/document/8905/leonicornswap-dapp-defi-bsc-logo-166x166_ccdf493ffb41233d85061fcc21dcae23.png"
+  },
+  {
+    "title": "Carv",
+    "link": "https://carv.io/home",
+    "description": "Carv is building a user-owned gaming identity that enables achievement display, friends & games discovery, direct monetization.",
+    "isFavorites": false,
+    "image": "https://dashboard-assets.dappradar.com/document/17343/carv-dapp-games-matic-logo-166x166_f96d1ca7b76ea2ee83c810623a7f1cbb.png"
   }
 ]
