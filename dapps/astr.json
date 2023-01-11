@@ -26,5 +26,19 @@
     "description": "First native yield aggregator with aLP/aToken on Astar, Rebuild Trust via ISO launchpad on Astar Network for Polkadot",
     "isFavorites": false,
     "image": "https://dashboard-assets.dappradar.com/document/15343/astarfarm-dapp-games-astar-logo-166x166_8d1452e40c5b1359c8bbd328c8463df9.png"
+  },
+  {
+    "title": "Algem",
+    "link": "https://www.algem.io/",
+    "description": "Algem is a DeFi dApp built on Astar Network that allows you to stay liquid while staking your ASTR.",
+    "isFavorites": false,
+    "image": "https://github.com/enkryptcom/dynamic-data/blob/main/assets/astar/algem.png?raw=true"
+  },
+  {
+    "title": "Astar Exchange",
+    "link": "https://astar.exchange",
+    "description": "Fully decentralized protocol for automated liquidity provision on Astar, Governance Token distributed to LP by yield farming.",
+    "isFavorites": false,
+    "image": "https://github.com/enkryptcom/dynamic-data/blob/main/assets/astar/astar-exchange.png?raw=true"
   }
 ]
