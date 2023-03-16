@@ -47,12 +47,5 @@
     "description": "The wallet web3 deserves. Tally Ho is the first wallet owned by its users.",
     "isFavorites": false,
     "image": "https://avatars.githubusercontent.com/u/77035304?s=200&v=4"
-  },
-  {
-    "title": "My Crypto",
-    "link": "https://mycrypto.com/",
-    "description": "Unify all your Ethereum accounts without giving up your privacy or security.",
-    "isFavorites": false,
-    "image": "https://avatars.githubusercontent.com/u/32279762?s=200&v=4"
   }
 ]
