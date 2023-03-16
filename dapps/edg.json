@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Polkadot.js",
+    "description": "An all in one utility for the Polkadot ecosystem",
+    "link": "https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fedgeware.jelliedowl.net#/",
+    "isFavorites": false,
+    "image": "https://polkadot.js.org/docs/img/logo.svg"
+  },
+  {
+    "title": "EdgeApps",
+    "link": "https://edgeware.app/",
+    "description": "Customised fork of Polkadot.js for the Edgeverse!",
+    "isFavorites": false,
+    "image": "https://www.edgeware.app/static/edgeware-white.08fe471b..png"
+  },
+  {
+    "title": "Governance Forum",
+    "link": "https://gov.edgewa.re/",
+    "description": "All-in-one platform for on-chain communities to discuss, vote, and fund projects together.",
+    "isFavorites": false,
+    "image": "https://commonwealth.im/static/brand_assets/logo_stacked.png"
+  },
+  {
+    "title": "Edgeware Tools",
+    "link": "https://edgeware.io/tools",
+    "description": "A one stop solution for all your basic Edgeverse needs and a gateway between EdgeEVM & EdgeWASM.",
+    "isFavorites": false,
+    "image": "https://www.edgeware.io/assets/press/edgeware-main-logomark.png"
+  },
+  {
+    "title": "edgeverseDEX and Cross-chain Bridge",
+    "link": "https://edgeverse.exchange",
+    "description": "Multichain DEX and Cross-chain Bridge suite for EdgeEVM by Bharathcoorg",
+    "isFavorites": false,
+    "image": "https://d1fdloi71mui9q.cloudfront.net/SOWF5G7rSdi34DvsQemm_bR7qZvCfo59O16Wb"
+  }
+]
