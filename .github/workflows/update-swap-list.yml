@@ -13,10 +13,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "14"
-          cache: "npm"
-      - run: cd swap-tokens-generator && npm install && npm run build
-      - run: cd swap-tokens-generator && npm run update:lists
-      - run: cd swap-tokens-generator && mv dist/lists/*.json ../swaplists
+          cache: "yarn"
+          cache-dependency-path: swap-tokens-generator/yarn.lock
+      - run: cd swap-tokens-generator
+      - run: npm install && npm run build
+      - run: npm run update:lists
+      - run: mv dist/lists/*.json ../swaplists
       - uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actions
