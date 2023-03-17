@@ -9,6 +9,7 @@ import coingecko, {
   getCoinGeckoTopTokenInfo,
   supportedChains as cgSupportedChains,
 } from "./list-handlers/coingecko";
+import changelly from "./list-handlers/changelly";
 import { NetworkName, Token } from "./types";
 import { NATIVE_ADDRESS } from "./configs";
 
@@ -45,26 +46,31 @@ const runner = async () => {
           const addresses = Object.keys(items);
           addresses.forEach((address) => {
             if (includedTokens.includes(address)) return;
-            const token = {
+            const token: Token = {
               address: items[address].address,
               decimals: items[address].decimals,
               logoURI: items[address].logoURI,
               name: items[address].name,
               symbol: items[address].symbol,
             };
+            const cgId = topTokenInfo.contractsToId[address];
+            if (cgId) {
+              if (topTokenInfo.topTokens[cgId])
+                token.rank = topTokenInfo.topTokens[cgId] as number;
+              token.cgId = cgId as string;
+            }
             if (address !== NATIVE_ADDRESS) tokens.push(token);
             if (address === NATIVE_ADDRESS) tokens.unshift(token);
             includedTokens.push(address);
-            const cgId = topTokenInfo.contractsToId[address];
             if (!cgId) return;
             if (topTokenInfo.topTokens[cgId])
               topTokens.push({
-                score: topTokenInfo.topTokens[cgId],
+                score: topTokenInfo.topTokens[cgId] as number,
                 token,
               });
             if (topTokenInfo.trendingTokens[cgId])
               trendingTokens.push({
-                score: topTokenInfo.trendingTokens[cgId],
+                score: topTokenInfo.trendingTokens[cgId] as number,
                 token,
               });
           });
@@ -85,5 +91,7 @@ const runner = async () => {
       });
     }
   );
+  const changellyTokens = await changelly();
+  writeFileSync(`./dist/lists/changelly.json`, JSON.stringify(changellyTokens));
 };
 runner();

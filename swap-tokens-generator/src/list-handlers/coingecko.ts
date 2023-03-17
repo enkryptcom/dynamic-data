@@ -28,7 +28,7 @@ export const supportedChains: NetworkName[] = [
   NetworkName.Klaytn,
   NetworkName.Aurora,
 ];
-export const getTrendingTokenId = async () =>
+export const getTrendingTokenId = async (): Promise<Record<string, number>> =>
   fetch(`${CG_API_BASE}search/trending`)
     .then((res) => res.json())
     .then((_json) => {
@@ -47,9 +47,9 @@ export const getTrendingTokenId = async () =>
       return resp;
     });
 
-export const getTopTokenIds = async () =>
+export const getTopTokenIds = async (): Promise<Record<string, number>> =>
   fetch(
-    `${CG_API_BASE}coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`
+    `${CG_API_BASE}coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false`
   )
     .then((res) => res.json())
     .then((_json) => {
@@ -64,7 +64,9 @@ export const getTopTokenIds = async () =>
       return resp;
     });
 
-export const getContractAddressesToCG = async () =>
+export const getContractAddressesToCG = async (): Promise<
+  Record<string, string>
+> =>
   fetch(`${CG_API_BASE}coins/list?include_platform=true`)
     .then((res) => res.json())
     .then((_json) => {

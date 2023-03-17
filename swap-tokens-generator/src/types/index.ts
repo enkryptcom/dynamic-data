@@ -26,4 +26,6 @@ export interface Token {
   decimals: number;
   name: string;
   logoURI: string;
+  rank?: number;
+  cgId?: string;
 }
