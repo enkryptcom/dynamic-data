@@ -33,7 +33,9 @@ export default async (): Promise<ChangellyCurrency[]> =>
       const json = _json as {
         result: ChangellyCurrency[];
       };
-      return json.result.filter(
+      const filtered = json.result.filter(
         (cur) => cur.enabled && cur.enabledFrom && cur.enabledTo
       );
+      filtered.sort((a, b) => a.fullName.localeCompare(b.fullName));
+      return filtered;
     });

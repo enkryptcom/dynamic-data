@@ -81,6 +81,9 @@ const runner = async () => {
         allResults.forEach((res) => {
           if (res[chain]) addTokensIfNotAdded(res[chain]);
         });
+        const native = tokens.shift();
+        tokens.sort((a, b) => a.name.localeCompare(b.name));
+        tokens.unshift(native);
         topTokens.sort((a, b) => a.score - b.score);
         trendingTokens.sort((a, b) => a.score - b.score);
         writeFileSync(
