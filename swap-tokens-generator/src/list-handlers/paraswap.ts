@@ -25,6 +25,7 @@ export default async (chainName: NetworkName): Promise<Record<string, Token>> =>
       };
       const resp: Record<string, Token> = {};
       json.tokens.forEach((token) => {
+        if (token.img === "https://cdn.paraswap.io/token/token.png") return; // no need tokens without atleast a proper image
         resp[token.address.toLowerCase()] = {
           address: token.address,
           decimals: token.decimals,
