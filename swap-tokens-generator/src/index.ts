@@ -11,7 +11,7 @@ import coingecko, {
 } from "./list-handlers/coingecko";
 import changelly from "./list-handlers/changelly";
 import { NetworkName, Token } from "./types";
-import { NATIVE_ADDRESS } from "./configs";
+import { CHAIN_CONFIGS, NATIVE_ADDRESS } from "./configs";
 
 const runner = async () => {
   const oneInchTokens: Record<string, Record<string, Token>> = {};
@@ -60,7 +60,10 @@ const runner = async () => {
               token.cgId = cgId as string;
             }
             if (address !== NATIVE_ADDRESS) tokens.push(token);
-            if (address === NATIVE_ADDRESS) tokens.unshift(token);
+            if (address === NATIVE_ADDRESS) {
+              token.cgId = CHAIN_CONFIGS[chain].cgId;
+              tokens.unshift(token);
+            }
             includedTokens.push(address);
             if (!cgId) return;
             if (topTokenInfo.topTokens[cgId])

@@ -18,6 +18,7 @@ export enum NetworkType {
 export interface ChainConfig {
   chainId: string;
   type: NetworkType;
+  cgId: string;
 }
 
 export interface Token {
