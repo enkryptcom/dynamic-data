@@ -9,7 +9,9 @@ import coingecko, {
   getCoinGeckoTopTokenInfo,
   supportedChains as cgSupportedChains,
 } from "./list-handlers/coingecko";
-import changelly from "./list-handlers/changelly";
+import changelly, {
+  formatChangellyCurrencies,
+} from "./list-handlers/changelly";
 import { NetworkName, Token } from "./types";
 import { CHAIN_CONFIGS, NATIVE_ADDRESS } from "./configs";
 
@@ -34,6 +36,7 @@ const runner = async () => {
     })
   );
   const topTokenInfo = await getCoinGeckoTopTokenInfo();
+  let changellyTokens = await changelly();
   Promise.all(cgPromises.concat(oneInchPromises).concat(paraswapPromises)).then(
     () => {
       const allResults = [coingeckoTokens, oneInchTokens, paraswapTokens];
@@ -86,6 +89,11 @@ const runner = async () => {
         tokens.unshift(native);
         topTokens.sort((a, b) => a.score - b.score);
         trendingTokens.sort((a, b) => a.score - b.score);
+        changellyTokens = formatChangellyCurrencies(
+          changellyTokens,
+          tokens,
+          chain
+        );
         writeFileSync(
           `./dist/lists/${chain}.json`,
           JSON.stringify({
@@ -95,9 +103,11 @@ const runner = async () => {
           })
         );
       });
+      writeFileSync(
+        `./dist/lists/changelly.json`,
+        JSON.stringify(changellyTokens)
+      );
     }
   );
-  const changellyTokens = await changelly();
-  writeFileSync(`./dist/lists/changelly.json`, JSON.stringify(changellyTokens));
 };
 runner();

@@ -51,6 +51,11 @@ const CHAIN_CONFIGS: Record<NetworkName, ChainConfig> = {
     type: NetworkType.EVM,
     cgId: "ethereum",
   },
+  [NetworkName.EthereumClassic]: {
+    chainId: "61",
+    type: NetworkType.EVM,
+    cgId: "ethereum-classic",
+  },
 };
 
 const NATIVE_ADDRESS = "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";

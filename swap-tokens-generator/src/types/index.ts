@@ -1,5 +1,6 @@
 export enum NetworkName {
   Ethereum = "ETH",
+  EthereumClassic = "ETC",
   Binance = "BNB",
   Matic = "MATIC",
   Optimism = "OP",
