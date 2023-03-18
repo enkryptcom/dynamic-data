@@ -14,6 +14,7 @@ const ChangellyPlatforms: {
   [NetworkName.Avalanche]: "avaxc",
   [NetworkName.Klaytn]: "klaytn",
   [NetworkName.Optimism]: "optimism",
+  [NetworkName.Moonbeam]: "glmr",
 };
 const ChangellyContractMap: {
   [key in NetworkName]?: Record<string, string>;
@@ -24,6 +25,9 @@ const ChangellyContractMap: {
     usdtavac: "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
     usdcavac: "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
     qi: "0x8729438eb15e2c8b576fcc6aecda6a148776c0f5",
+  },
+  [NetworkName.Moonbeam]: {
+    glmr: NATIVE_ADDRESS,
   },
 };
 

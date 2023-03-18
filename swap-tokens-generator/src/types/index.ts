@@ -10,6 +10,7 @@ export enum NetworkName {
   Fantom = "FTM",
   Klaytn = "KLAY",
   Aurora = "AURORA",
+  Moonbeam = "GLMR",
 }
 
 export enum NetworkType {
@@ -20,6 +21,10 @@ export interface ChainConfig {
   chainId: string;
   type: NetworkType;
   cgId: string;
+  logoURI: string;
+  decimals: number;
+  symbol: string;
+  name: string;
 }
 
 export interface Token {

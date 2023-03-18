@@ -1,3 +1,4 @@
+import { CHAIN_CONFIGS, NATIVE_ADDRESS } from "@src/configs";
 import { NetworkName, Token } from "@src/types";
 import fetch from "node-fetch";
 
@@ -16,6 +17,7 @@ const cgPlatform: Record<NetworkName, string> = {
   [NetworkName.Klaytn]: "klay-token",
   [NetworkName.Optimism]: "optimistic-ethereum",
   [NetworkName.EthereumClassic]: "ethereum-classic",
+  [NetworkName.Moonbeam]: "moonbeam",
 };
 export const supportedChains: NetworkName[] = [
   NetworkName.Ethereum,
@@ -29,6 +31,7 @@ export const supportedChains: NetworkName[] = [
   NetworkName.Klaytn,
   NetworkName.Aurora,
   NetworkName.EthereumClassic,
+  NetworkName.Moonbeam,
 ];
 export const getTrendingTokenId = async (): Promise<Record<string, number>> =>
   fetch(`${CG_API_BASE}search/trending`)
@@ -108,5 +111,13 @@ export default async (chainName: NetworkName): Promise<Record<string, Token>> =>
       json.tokens.forEach((token) => {
         resp[token.address.toLowerCase()] = token;
       });
+      resp[NATIVE_ADDRESS] = {
+        address: NATIVE_ADDRESS,
+        decimals: CHAIN_CONFIGS[chainName].decimals,
+        logoURI: CHAIN_CONFIGS[chainName].logoURI,
+        name: CHAIN_CONFIGS[chainName].name,
+        symbol: CHAIN_CONFIGS[chainName].symbol,
+        cgId: CHAIN_CONFIGS[chainName].cgId,
+      };
       return resp;
     });
