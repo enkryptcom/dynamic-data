@@ -24,5 +24,9 @@ export default async (chainName: NetworkName): Promise<Record<string, Token>> =>
       const json = _json as {
         tokens: Record<string, Token>;
       };
+      const addresses = Object.keys(json.tokens);
+      addresses.forEach((addr) => {
+        json.tokens[addr].type = CHAIN_CONFIGS[chainName].type;
+      });
       return json.tokens;
     });

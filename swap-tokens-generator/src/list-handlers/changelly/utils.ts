@@ -1,5 +1,5 @@
 import { NATIVE_ADDRESS } from "@src/configs";
-import { NetworkName, Token } from "@src/types";
+import { NetworkName, NetworkType, Token } from "@src/types";
 
 const ChangellyPlatforms: {
   [key in NetworkName]?: string;
@@ -36,6 +36,7 @@ const NativeTokens: Record<string, Token> = {
       "https://assets.coingecko.com/coins/images/12171/thumb/polkadot.png",
     name: "Polkadot",
     symbol: "DOT",
+    type: NetworkType.Substrate,
     cgId: "polkadot",
   },
   ksm: {
@@ -45,6 +46,7 @@ const NativeTokens: Record<string, Token> = {
       "https://assets.coingecko.com/coins/images/9568/thumb/m4zRhP5e_400x400.jpg",
     name: "Kusama",
     symbol: "ksm",
+    type: NetworkType.Substrate,
     cgId: "kusama",
   },
   btc: {
@@ -53,6 +55,7 @@ const NativeTokens: Record<string, Token> = {
     logoURI: "https://assets.coingecko.com/coins/images/1/thumb/bitcoin.png",
     name: "Bitcoin",
     symbol: "BTC",
+    type: NetworkType.Bitcoin,
     cgId: "bitcoin",
   },
 };

@@ -15,6 +15,8 @@ export enum NetworkName {
 
 export enum NetworkType {
   EVM = "evm",
+  Substrate = "substrate",
+  Bitcoin = "bitcoin",
 }
 
 export interface ChainConfig {
@@ -25,6 +27,7 @@ export interface ChainConfig {
   decimals: number;
   symbol: string;
   name: string;
+  networkType: NetworkType;
 }
 
 export interface Token {
@@ -33,6 +36,7 @@ export interface Token {
   decimals: number;
   name: string;
   logoURI: string;
+  type: NetworkType;
   rank?: number;
   cgId?: string;
 }

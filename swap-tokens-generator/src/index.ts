@@ -55,6 +55,7 @@ const runner = async () => {
               logoURI: items[address].logoURI,
               name: items[address].name,
               symbol: items[address].symbol,
+              type: items[address].type,
             };
             const cgId = topTokenInfo.contractsToId[address];
             if (cgId) {
