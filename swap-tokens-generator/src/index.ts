@@ -115,6 +115,10 @@ const runner = async () => {
         `./dist/lists/changelly.json`,
         JSON.stringify(changellyTokens)
       );
+      writeFileSync(
+        `./dist/lists/top-tokens.json`,
+        JSON.stringify(topTokenInfo)
+      );
     }
   );
 };
