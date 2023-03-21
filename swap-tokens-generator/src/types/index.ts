@@ -27,7 +27,6 @@ export interface ChainConfig {
   decimals: number;
   symbol: string;
   name: string;
-  networkType: NetworkType;
 }
 
 export interface Token {
@@ -39,4 +38,5 @@ export interface Token {
   type: NetworkType;
   rank?: number;
   cgId?: string;
+  price?: number;
 }

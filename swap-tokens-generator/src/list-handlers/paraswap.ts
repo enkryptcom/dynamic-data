@@ -9,6 +9,9 @@ export const supportedChains: NetworkName[] = [
   NetworkName.Binance,
   NetworkName.Matic,
   NetworkName.Avalanche,
+  NetworkName.Fantom,
+  NetworkName.Arbitrum,
+  NetworkName.Optimism,
 ];
 
 export default async (chainName: NetworkName): Promise<Record<string, Token>> =>
@@ -27,7 +30,7 @@ export default async (chainName: NetworkName): Promise<Record<string, Token>> =>
       json.tokens.forEach((token) => {
         if (token.img === "https://cdn.paraswap.io/token/token.png") return; // no need tokens without atleast a proper image
         resp[token.address.toLowerCase()] = {
-          type: CHAIN_CONFIGS[chainName].networkType,
+          type: CHAIN_CONFIGS[chainName].type,
           address: token.address,
           decimals: token.decimals,
           logoURI: token.img,

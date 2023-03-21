@@ -14,6 +14,7 @@ import changelly, {
 } from "./list-handlers/changelly";
 import { NetworkName, Token } from "./types";
 import { CHAIN_CONFIGS, NATIVE_ADDRESS } from "./configs";
+import PriceFeed from "./pricefeed";
 
 const runner = async () => {
   const oneInchTokens: Record<string, Record<string, Token>> = {};
@@ -37,6 +38,7 @@ const runner = async () => {
   );
   const topTokenInfo = await getCoinGeckoTopTokenInfo();
   let changellyTokens = await changelly();
+  const prices = await PriceFeed();
   Promise.all(cgPromises.concat(oneInchPromises).concat(paraswapPromises)).then(
     () => {
       const allResults = [coingeckoTokens, oneInchTokens, paraswapTokens];
@@ -49,6 +51,10 @@ const runner = async () => {
           const addresses = Object.keys(items);
           addresses.forEach((address) => {
             if (includedTokens.includes(address)) return;
+            const price =
+              prices[chain] && prices[chain][address]
+                ? prices[chain][address]
+                : null;
             const token: Token = {
               address: items[address].address,
               decimals: items[address].decimals,
@@ -57,6 +63,7 @@ const runner = async () => {
               symbol: items[address].symbol,
               type: items[address].type,
             };
+            if (price) token.price = price;
             const cgId = topTokenInfo.contractsToId[address];
             if (cgId) {
               if (topTokenInfo.topTokens[cgId])

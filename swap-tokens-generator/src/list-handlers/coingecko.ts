@@ -111,12 +111,12 @@ export default async (chainName: NetworkName): Promise<Record<string, Token>> =>
       json.tokens.forEach((token) => {
         resp[token.address.toLowerCase()] = {
           ...token,
-          type: CHAIN_CONFIGS[chainName].networkType,
+          type: CHAIN_CONFIGS[chainName].type,
         };
       });
       resp[NATIVE_ADDRESS] = {
         address: NATIVE_ADDRESS,
-        type: CHAIN_CONFIGS[chainName].networkType,
+        type: CHAIN_CONFIGS[chainName].type,
         decimals: CHAIN_CONFIGS[chainName].decimals,
         logoURI: CHAIN_CONFIGS[chainName].logoURI,
         name: CHAIN_CONFIGS[chainName].name,
