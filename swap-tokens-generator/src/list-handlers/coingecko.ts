@@ -52,7 +52,15 @@ export const getTrendingTokenId = async (): Promise<Record<string, number>> =>
       return resp;
     });
 
-export const getTopTokenIds = async (): Promise<Record<string, number>> =>
+export const getTopTokenIds = async (): Promise<
+  Record<
+    string,
+    {
+      rank: number;
+      price: number;
+    }
+  >
+> =>
   fetch(
     `${CG_API_BASE}coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false`
   )
@@ -61,10 +69,20 @@ export const getTopTokenIds = async (): Promise<Record<string, number>> =>
       const json = _json as {
         id: string;
         market_cap_rank: number;
+        current_price: number;
       }[];
-      const resp: Record<string, number> = {};
+      const resp: Record<
+        string,
+        {
+          rank: number;
+          price: number;
+        }
+      > = {};
       json.forEach((coin) => {
-        resp[coin.id] = coin.market_cap_rank;
+        resp[coin.id] = {
+          rank: coin.market_cap_rank,
+          price: coin.current_price,
+        };
       });
       return resp;
     });
@@ -95,9 +113,15 @@ export const getCoinGeckoTopTokenInfo = async () => {
     getContractAddressesToCG(),
   ];
   return Promise.all(promises).then((result) => ({
-    trendingTokens: result[0],
-    topTokens: result[1],
-    contractsToId: result[2],
+    trendingTokens: result[0] as Record<string, number>,
+    topTokens: result[1] as Record<
+      string,
+      {
+        rank: number;
+        price: number;
+      }
+    >,
+    contractsToId: result[2] as Record<string, string>,
   }));
 };
 export default async (chainName: NetworkName): Promise<Record<string, Token>> =>

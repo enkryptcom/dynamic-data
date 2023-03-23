@@ -44,8 +44,8 @@ const runner = async () => {
       const allResults = [coingeckoTokens, oneInchTokens, paraswapTokens];
       allChains.forEach((chain) => {
         const tokens: Token[] = [];
-        const topTokens: { score: number; token: Token }[] = [];
-        const trendingTokens: { score: number; token: Token }[] = [];
+        const topTokens: { rank: number; token: Token }[] = [];
+        const trendingTokens: { rank: number; token: Token }[] = [];
         const includedTokens: string[] = [];
         const addTokensIfNotAdded = (items: Record<string, Token>) => {
           const addresses = Object.keys(items);
@@ -64,27 +64,29 @@ const runner = async () => {
               type: items[address].type,
             };
             if (price) token.price = price;
-            const cgId = topTokenInfo.contractsToId[address];
+            const cgId = topTokenInfo.contractsToId[address] as string;
             if (cgId) {
               if (topTokenInfo.topTokens[cgId])
-                token.rank = topTokenInfo.topTokens[cgId] as number;
-              token.cgId = cgId as string;
+                token.rank = topTokenInfo.topTokens[cgId].rank;
+              token.cgId = cgId;
             }
             if (address !== NATIVE_ADDRESS) tokens.push(token);
             if (address === NATIVE_ADDRESS) {
               token.cgId = CHAIN_CONFIGS[chain].cgId;
+              if (topTokenInfo.topTokens[token.cgId])
+                token.rank = topTokenInfo.topTokens[token.cgId].rank;
               tokens.unshift(token);
             }
             includedTokens.push(address);
             if (!cgId) return;
             if (topTokenInfo.topTokens[cgId])
               topTokens.push({
-                score: topTokenInfo.topTokens[cgId] as number,
+                rank: topTokenInfo.topTokens[cgId].rank,
                 token,
               });
             if (topTokenInfo.trendingTokens[cgId])
               trendingTokens.push({
-                score: topTokenInfo.trendingTokens[cgId] as number,
+                rank: topTokenInfo.trendingTokens[cgId] as number,
                 token,
               });
           });
@@ -95,8 +97,8 @@ const runner = async () => {
         const native = tokens.shift();
         tokens.sort((a, b) => a.name.localeCompare(b.name));
         tokens.unshift(native);
-        topTokens.sort((a, b) => a.score - b.score);
-        trendingTokens.sort((a, b) => a.score - b.score);
+        topTokens.sort((a, b) => a.rank - b.rank);
+        trendingTokens.sort((a, b) => a.rank - b.rank);
         changellyTokens = formatChangellyCurrencies(
           changellyTokens,
           tokens,
@@ -110,6 +112,10 @@ const runner = async () => {
             top: topTokens.map((t) => t.token),
           })
         );
+      });
+      changellyTokens.forEach((t) => {
+        if (t.token && t.token.cgId && topTokenInfo.topTokens[t.token.cgId])
+          t.token.price = topTokenInfo.topTokens[t.token.cgId].price;
       });
       writeFileSync(
         `./dist/lists/changelly.json`,
