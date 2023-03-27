@@ -51,9 +51,14 @@ const runner = async () => {
           const addresses = Object.keys(items);
           addresses.forEach((address) => {
             if (includedTokens.includes(address)) return;
-            const price =
+            const cgId = topTokenInfo.contractsToId[address] as string;
+            let price =
               prices[chain] && prices[chain][address]
                 ? prices[chain][address]
+                : null;
+            if (!price && cgId)
+              price = topTokenInfo.topTokens[cgId]
+                ? topTokenInfo.topTokens[cgId].price
                 : null;
             const token: Token = {
               address: items[address].address,
@@ -64,7 +69,6 @@ const runner = async () => {
               type: items[address].type,
             };
             if (price) token.price = price;
-            const cgId = topTokenInfo.contractsToId[address] as string;
             if (cgId) {
               if (topTokenInfo.topTokens[cgId])
                 token.rank = topTokenInfo.topTokens[cgId].rank;
