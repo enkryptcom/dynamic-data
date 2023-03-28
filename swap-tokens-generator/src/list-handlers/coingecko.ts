@@ -5,6 +5,7 @@ import fetch from "node-fetch";
 const CG_BASE = `https://tokens.coingecko.com/`;
 const CG_API_BASE = `https://api.coingecko.com/api/v3/`;
 
+const excludedAddresses = ["0x0000000000000000000000000000000000001010"];
 const cgPlatform: Record<NetworkName, string> = {
   [NetworkName.Ethereum]: "ethereum",
   [NetworkName.Matic]: "polygon-pos",
@@ -133,6 +134,7 @@ export default async (chainName: NetworkName): Promise<Record<string, Token>> =>
       };
       const resp: Record<string, Token> = {};
       json.tokens.forEach((token) => {
+        if (excludedAddresses.includes(token.address.toLowerCase())) return;
         resp[token.address.toLowerCase()] = {
           ...token,
           type: CHAIN_CONFIGS[chainName].type,
