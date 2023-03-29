@@ -34,7 +34,7 @@ const CHAIN_CONFIGS: Record<NetworkName, ChainConfig> = {
   [NetworkName.Optimism]: {
     chainId: "10",
     type: NetworkType.EVM,
-    cgId: "optimism",
+    cgId: "ethereum",
     decimals: 18,
     logoURI:
       "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",

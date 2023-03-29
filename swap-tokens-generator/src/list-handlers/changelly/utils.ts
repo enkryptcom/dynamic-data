@@ -26,6 +26,9 @@ const ChangellyContractMap: {
   [NetworkName.Moonbeam]: {
     glmr: NATIVE_ADDRESS,
   },
+  [NetworkName.Optimism]: {
+    op: "0x4200000000000000000000000000000000000042",
+  },
 };
 
 const NativeTokens: Record<string, Token> = {
