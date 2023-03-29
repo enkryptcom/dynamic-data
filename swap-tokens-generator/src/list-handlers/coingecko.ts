@@ -3,7 +3,7 @@ import { NetworkName, Token } from "@src/types";
 import fetch from "node-fetch";
 
 const CG_BASE = `https://tokens.coingecko.com/`;
-const CG_API_BASE = `https://api.coingecko.com/api/v3/`;
+const CG_API_BASE = `https://partners.mewapi.io/coingecko/api/v3/`;
 
 const excludedAddresses = ["0x0000000000000000000000000000000000001010"];
 const cgPlatform: Record<NetworkName, string> = {
