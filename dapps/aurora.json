@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Trisolaris",
+    "link": "https://www.trisolaris.io/",
+    "description": "Dex on the Aurora engine, an EVM compatible blockchain running in the near ecosystem.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/trisolaris.png"
+  },
+  {
+    "title": "motoDEX",
+    "link": "https://motodex.openbisea.com/",
+    "description": "MotoDEX is a Blockchain Game, in which users participate in motorcycle races, develop their riders and improve high-speed tracks.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/motodex.png"
+  },
+  {
+    "title": "OpenBiSea",
+    "description": "Multi-chain NFT auctions in all-in-one place to cut any NFT deal in a few clicks with a $200M support fund. No registration, mobile apps, wallet includes.",
+    "link": "https://openbisea.io/",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/openbisea.png"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Uniswap V3",
+    "link": "https://app.uniswap.org/",
+    "description": "A protocol for trading and automated liquidity provision on Ethereum.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/uniswap.png"
+  },
+  {
+    "title": "Stargate Finance",
+    "link": "https://stargate.finance/",
+    "description": "Stargate is a fully composable liquidity transport protocol that lives at the heart of omnichain DeFi.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/stargate.png"
+  },
+  {
+    "title": "Bungee",
+    "description": "Bungee is a metabridge offering seamless bridging across chains. We aggregate all bridges, DEX's and DEX Aggregators to offer the best product!",
+    "link": "https://www.bungee.exchange/",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/bungee.png"
+  }
+]
