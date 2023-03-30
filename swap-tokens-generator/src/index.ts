@@ -77,8 +77,10 @@ const runner = async () => {
             if (address !== NATIVE_ADDRESS) tokens.push(token);
             if (address === NATIVE_ADDRESS) {
               token.cgId = CHAIN_CONFIGS[chain].cgId;
-              if (topTokenInfo.topTokens[token.cgId])
+              if (topTokenInfo.topTokens[token.cgId]) {
                 token.rank = topTokenInfo.topTokens[token.cgId].rank;
+                token.price = topTokenInfo.topTokens[token.cgId].price;
+              }
               tokens.unshift(token);
             }
             includedTokens.push(address);
