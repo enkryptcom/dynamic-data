@@ -1,5 +1,12 @@
 [
   {
+    "title": "Arbitrum Bridge",
+    "link": "https://bridge.arbitrum.io/",
+    "description": "Transfer assets to and from arbitrum",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/arb.svg"
+  },
+  {
     "title": "Uniswap V3",
     "link": "https://app.uniswap.org/",
     "description": "A protocol for trading and automated liquidity provision on Ethereum.",
