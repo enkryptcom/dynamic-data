@@ -26,5 +26,12 @@
     "link": "https://www.bungee.exchange/",
     "isFavorites": false,
     "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/bungee.png"
+  },
+  {
+    "title": "OnyxDAO",
+    "description": "Onyx is a DeFi Predictions Market that puts our token holders first while serving prompt insights, big thrills.",
+    "link": "https://app.onyxdao.finance/",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/onyxdao.png"
   }
 ]
