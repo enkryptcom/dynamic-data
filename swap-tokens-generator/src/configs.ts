@@ -17,7 +17,7 @@ const CHAIN_CONFIGS: Record<NetworkName, ChainConfig> = {
     cgId: "binancecoin",
     decimals: 18,
     logoURI:
-      "https://tokens.1inch.io/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c_1.png",
+      "https://tokens.1inch.io/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png",
     name: "BNB",
     symbol: "BNB",
   },
