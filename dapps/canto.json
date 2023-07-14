@@ -54,5 +54,12 @@
     "description": "Y2R Finance automatically harvests and reinvests your LP rewards.",
     "isFavorites": false,
     "image": "https://github-production-user-asset-6210df.s3.amazonaws.com/113649059/238222768-5013c841-4440-4c67-bb8c-ee6d1023eed7.png"
+  },
+  {
+    "title": "CSR CANTO",
+    "link": "https://csrcanto.xyz/",
+    "description": "The ecosystem hub for everything CSR, and building yield-bearing blocks for Canto DeFi and NFTfi.",
+    "isFavorites": false,
+    "image": "https://csrcanto.xyz/static/logo.png"
   }
 ]
