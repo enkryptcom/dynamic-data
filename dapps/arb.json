@@ -1,5 +1,12 @@
 [
   {
+    "title": "GenieSwap",
+    "link": "https://app.genieswap.com",
+    "description": "Your gateway to decentralized finance.",
+    "isFavorites": true,
+    "image": "https://genieswap.com/assets/img/icons/genie.png"
+  },
+  {
     "title": "Arbitrum Bridge",
     "link": "https://bridge.arbitrum.io/",
     "description": "Transfer assets to and from arbitrum",
