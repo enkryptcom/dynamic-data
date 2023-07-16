@@ -1,0 +1,16 @@
+[
+   {
+    "title": "GenieSwap",
+    "link": "https://app.genieswap.com",
+    "description": "Your gateway to decentralized finance.",
+    "isFavorites": true,
+    "image": "https://genieswap.com/assets/img/icons/genie.png"
+  },
+  {
+    "title": "NFT ONE",
+    "link": "https://nftone.net/",
+    "description": "The world's first Tron-based NFT marketplace.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/wavect/wallet-dynamic-data/main/assets/icons/tron-nftone.jpeg"
+  },
+]
