@@ -15,6 +15,7 @@ import changelly, {
 import { NetworkName, Token } from "./types";
 import { CHAIN_CONFIGS, NATIVE_ADDRESS } from "./configs";
 import PriceFeed from "./pricefeed";
+import { getPriceByIDs } from "./ethvm";
 
 const runner = async () => {
   const oneInchTokens: Record<string, Record<string, Token>> = {};
@@ -39,6 +40,7 @@ const runner = async () => {
   const topTokenInfo = await getCoinGeckoTopTokenInfo();
   let changellyTokens = await changelly();
   const prices = await PriceFeed();
+  let ethvmPrices: Record<string, number | undefined> = {};
   Promise.all(cgPromises.concat(oneInchPromises).concat(paraswapPromises)).then(
     () => {
       const allResults = [coingeckoTokens, oneInchTokens, paraswapTokens];
@@ -47,6 +49,8 @@ const runner = async () => {
         const topTokens: { rank: number; token: Token }[] = [];
         const trendingTokens: { rank: number; token: Token }[] = [];
         const includedTokens: string[] = [];
+        const priceMissingIds: string[] = [];
+
         const addTokensIfNotAdded = (items: Record<string, Token>) => {
           const addresses = Object.keys(items);
           addresses.forEach((address) => {
@@ -56,10 +60,12 @@ const runner = async () => {
               prices[chain] && prices[chain][address]
                 ? prices[chain][address]
                 : null;
-            if (!price && cgId)
+            if (!price && cgId) {
               price = topTokenInfo.topTokens[cgId]
                 ? topTokenInfo.topTokens[cgId].price
                 : null;
+              if (!price) priceMissingIds.push(cgId);
+            }
             const token: Token = {
               address: items[address].address,
               decimals: items[address].decimals,
@@ -110,18 +116,34 @@ const runner = async () => {
           tokens,
           chain
         );
-        writeFileSync(
-          `./dist/lists/${chain}.json`,
-          JSON.stringify({
-            all: tokens,
-            trending: trendingTokens.map((t) => t.token),
-            top: topTokens.map((t) => t.token),
-          })
-        );
+        getPriceByIDs(priceMissingIds).then((missingPrices) => {
+          ethvmPrices = { ...missingPrices, ...ethvmPrices };
+          writeFileSync(
+            `./dist/lists/${chain}.json`,
+            JSON.stringify({
+              all: tokens.map((t) => {
+                if (!t.price && t.cgId) t.price = missingPrices[t.cgId];
+                return t;
+              }),
+              trending: trendingTokens.map((t) => {
+                if (!t.token.price && t.token.cgId)
+                  t.token.price = missingPrices[t.token.cgId];
+                return t.token;
+              }),
+              top: topTokens.map((t) => {
+                if (!t.token.price && t.token.cgId)
+                  t.token.price = missingPrices[t.token.cgId];
+                return t.token;
+              }),
+            })
+          );
+        });
       });
       changellyTokens.forEach((t) => {
         if (t.token && t.token.cgId && topTokenInfo.topTokens[t.token.cgId])
           t.token.price = topTokenInfo.topTokens[t.token.cgId].price;
+        else if (t.token && t.token.cgId && ethvmPrices[t.token.cgId])
+          t.token.price = ethvmPrices[t.token.cgId];
       });
       writeFileSync(
         `./dist/lists/changelly.json`,
