@@ -11,7 +11,7 @@ export enum NetworkName {
   Klaytn = "KLAY",
   Aurora = "AURORA",
   Moonbeam = "GLMR",
-  ZkSync = "ZKSYNC",
+  ZkSync = "zkSync",
 }
 
 export enum NetworkType {
