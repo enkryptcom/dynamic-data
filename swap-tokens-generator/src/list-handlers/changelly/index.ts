@@ -7,7 +7,7 @@ import {
   NativeTokens,
 } from "./utils";
 
-const CHANGELLY_BASE = `https://swap.mewapi.io/changelly`;
+const CHANGELLY_BASE = `https://partners.mewapi.io/changelly-v2`;
 
 interface ChangellyCurrency {
   name: string;

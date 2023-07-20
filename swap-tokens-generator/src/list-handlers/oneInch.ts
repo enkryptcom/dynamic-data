@@ -2,7 +2,7 @@ import { CHAIN_CONFIGS } from "@src/configs";
 import { NetworkName, Token } from "@src/types";
 import fetch from "node-fetch";
 
-const ONEINCH_BASE = `https://api.1inch.io/v5.0/`;
+const ONEINCH_BASE = `https://partners.mewapi.io/oneinch/v5.2/`;
 
 export const supportedChains: NetworkName[] = [
   NetworkName.Ethereum,
@@ -15,6 +15,7 @@ export const supportedChains: NetworkName[] = [
   NetworkName.Fantom,
   NetworkName.Klaytn,
   NetworkName.Aurora,
+  NetworkName.ZkSync,
 ];
 
 export default async (chainName: NetworkName): Promise<Record<string, Token>> =>
