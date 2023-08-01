@@ -33,5 +33,12 @@
     "link": "https://app.onyxdao.finance/",
     "isFavorites": false,
     "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/onyxdao.png"
+  },
+ {
+    "title": "SPACE ID",
+    "description": "SPACE ID is a one-stop Web3 Domain & Identity Platform.",
+    "link": "https://space.id/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/ryYnmLG5/SPACE-ID-Icons.png"
   }
 ]
