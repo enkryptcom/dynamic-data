@@ -47,5 +47,12 @@
     "description": "Leonicorn Swap is an advanced AMM with features Like NFT Marketplace, Lottery, IDO and many other advanced features.",
     "isFavorites": false,
     "image": "https://dashboard-assets.dappradar.com/document/8905/leonicornswap-dapp-defi-bsc-logo-166x166_ccdf493ffb41233d85061fcc21dcae23.png"
+  },
+   {
+    "title": "SPACE ID",
+    "description": "SPACE ID is a one-stop Web3 Domain & Identity Platform.",
+    "link": "https://space.id/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/ryYnmLG5/SPACE-ID-Icons.png"
   }
 ]
