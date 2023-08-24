@@ -7,38 +7,10 @@
     "image": "https://genieswap.com/assets/img/icons/genie.png"
   },
   {
-    "title": "Arbitrum Bridge",
-    "link": "https://bridge.arbitrum.io/",
-    "description": "Transfer assets to and from arbitrum",
-    "isFavorites": false,
-    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/arb.svg"
-  },
-  {
-    "title": "Uniswap V3",
-    "link": "https://app.uniswap.org/",
-    "description": "A protocol for trading and automated liquidity provision on Ethereum.",
-    "isFavorites": false,
-    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/uniswap.png"
-  },
-  {
-    "title": "Stargate Finance",
-    "link": "https://stargate.finance/",
-    "description": "Stargate is a fully composable liquidity transport protocol that lives at the heart of omnichain DeFi.",
-    "isFavorites": false,
-    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/stargate.png"
-  },
-  {
-    "title": "Bungee",
-    "description": "Bungee is a metabridge offering seamless bridging across chains. We aggregate all bridges, DEX's and DEX Aggregators to offer the best product!",
-    "link": "https://www.bungee.exchange/",
-    "isFavorites": false,
-    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/bungee.png"
-  },
-  {
-    "title": "OnyxDAO",
-    "description": "Onyx is a DeFi Predictions Market that puts our token holders first while serving prompt insights, big thrills.",
-    "link": "https://app.onyxdao.finance/",
-    "isFavorites": false,
-    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/onyxdao.png"
+    "title": "MountainWolf",
+    "link": "https://mountainwolf.com/",
+    "description": "Your All-in-one ecosystem for digital payments and exchange.",
+    "isFavorites": true,
+    "image": "https://raw.githubusercontent.com/wavect/wallet-dynamic-data/044d6adc4eb765fd2536c14cc20e2ce66d63c1ac/assets/icons/mountainwolf.png"
   }
 ]
