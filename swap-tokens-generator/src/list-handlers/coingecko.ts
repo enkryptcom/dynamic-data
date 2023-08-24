@@ -19,6 +19,7 @@ const cgPlatform: Record<NetworkName, string> = {
   [NetworkName.Optimism]: "optimistic-ethereum",
   [NetworkName.EthereumClassic]: "ethereum-classic",
   [NetworkName.Moonbeam]: "moonbeam",
+  [NetworkName.ZkSync]: "zksync",
 };
 export const supportedChains: NetworkName[] = [
   NetworkName.Ethereum,

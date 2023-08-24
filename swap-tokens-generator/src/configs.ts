@@ -120,6 +120,16 @@ const CHAIN_CONFIGS: Record<NetworkName, ChainConfig> = {
     name: "Moonbeam",
     symbol: "GLMR",
   },
+  [NetworkName.ZkSync]: {
+    chainId: "324",
+    type: NetworkType.EVM,
+    cgId: "ethereum",
+    decimals: 18,
+    logoURI:
+      "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+    name: "Ethereum",
+    symbol: "ETH",
+  },
 };
 
 const NATIVE_ADDRESS = "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
