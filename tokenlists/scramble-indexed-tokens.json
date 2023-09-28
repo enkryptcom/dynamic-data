@@ -1,7 +1,7 @@
 {
   "tokens": [
     {
-      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
       "decimals": 6,
       "logoURI": "https://assets.coingecko.com/coins/images/325/thumb/Tether.png?1668148663",
       "name": "Tether",
@@ -10,7 +10,7 @@
       "cgId": "tether"
     },
     {
-      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "contract": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "decimals": 6,
       "logoURI": "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
       "name": "USD Coin",
@@ -19,7 +19,7 @@
       "cgId": "usd-coin"
     },
     {
-      "address": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
+      "contract": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/29850/thumb/pepe-token.jpeg?1682922725",
       "name": "Pepe",
@@ -28,7 +28,7 @@
       "cgId": "pepe"
     },
     {
-      "address": "0x665F77fbA5975ab40Ce61c90F28007fb5b09D7B1",
+      "contract": "0x665F77fbA5975ab40Ce61c90F28007fb5b09D7B1",
       "decimals": 18,
       "logoURI": "https://etherscan.io/token/images/genieswap_32.png",
       "name": "GenieSwap",
