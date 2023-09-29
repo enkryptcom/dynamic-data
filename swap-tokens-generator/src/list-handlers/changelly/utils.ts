@@ -61,6 +61,24 @@ const NativeTokens: Record<string, Token> = {
     type: NetworkType.Bitcoin,
     cgId: "bitcoin",
   },
+  ltc: {
+    address: NATIVE_ADDRESS,
+    decimals: 8,
+    logoURI: "https://assets.coingecko.com/coins/images/2/thumb/litecoin.png",
+    name: "Litecoin",
+    symbol: "LTC",
+    type: NetworkType.Bitcoin,
+    cgId: "litecoin",
+  },
+  doge: {
+    address: NATIVE_ADDRESS,
+    decimals: 8,
+    logoURI: "https://assets.coingecko.com/coins/images/5/thumb/dogecoin.png",
+    name: "Dogecoin",
+    symbol: "DOGE",
+    type: NetworkType.Bitcoin,
+    cgId: "dogecoin",
+  },
 };
 
 export { ChangellyContractMap, ChangellyPlatforms, NativeTokens };
