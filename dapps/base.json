@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "title": "BASE Bridge",
+    "link": "https://bridge.base.org/",
+    "description": "Base Bridge enables the transfer of certain digital assets and other data back and forth between Ethereum and Base.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/Y2VMw5sM/W-9qsu1e-400x400-1.png"
+  },
+  {
+    "title": "Orbiter Finance",
+    "link": "https://www.orbiter.finance/",
+    "description": "Orbiter Finance is a ZK-tech Based Ethereum Acceleration Engine that boosts L2s' performance and decreases gas consumption.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/gk8Jtckf/dapp-icon-orbiter-1.png"
+  },
+  {
+    "title": "friend.tech",
+    "link": "https://www.friend.tech/",
+    "description": "The marketplace for your friends.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/qMVBKfXQ/su-Wn898y-400x400-3-1.png"
+  },
+  {
+    "title": "Aerodrome",
+    "link": "https://aerodrome.finance/",
+    "description": "A central trading and liquidity marketplace on Base.",
+    "isFavorites": false,
+    "image": "https://aerodrome.finance/brand-kit/token.png"
+  },
+  {
+    "title": "SwapBased",
+    "link": "https://swapbased.finance/",
+    "description": "Offering swaps, staking, bridging, perpetuals and concentrated liquidity all in one place!",
+    "isFavorites": false,
+    "image": "https://swapbased.finance/static/media/base-logo.8e4c7d33.png"
+  },
+  {
+    "title": "Seamless Protocol",
+    "link": "https://www.seamlessprotocol.com/",
+    "description": "A decentralized, non-custodial liquidity market that creates a more seamless experience for Suppliers and Borrowers. The First Native Borrowing Protocol on BASE.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/Gts02p5r/Seamless-black-Logo-1.png"
+  }
+]
