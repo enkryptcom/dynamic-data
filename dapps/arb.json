@@ -7,13 +7,6 @@
     "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/arb.svg"
   },
   {
-    "title": "Uniswap V3",
-    "link": "https://app.uniswap.org/",
-    "description": "A protocol for trading and automated liquidity provision on Ethereum.",
-    "isFavorites": false,
-    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/uniswap.png"
-  },
-  {
     "title": "Stargate Finance",
     "link": "https://stargate.finance/",
     "description": "Stargate is a fully composable liquidity transport protocol that lives at the heart of omnichain DeFi.",
@@ -21,11 +14,46 @@
     "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/stargate.png"
   },
   {
-    "title": "Bungee",
-    "description": "Bungee is a metabridge offering seamless bridging across chains. We aggregate all bridges, DEX's and DEX Aggregators to offer the best product!",
-    "link": "https://www.bungee.exchange/",
+    "title": "GMX",
+    "description": "A decentralized spot and perpetual exchange that supports low swap fees and zero price impact trades.",
+    "link": "https://gmx.io/",
     "isFavorites": false,
-    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/bungee.png"
+    "image": "https://i.postimg.cc/25TKYrDr/GMX.png"
+  },
+  {
+    "title": "Camelot",
+    "description": "An ecosystem-focused and community-driven DEX built on Arbitrum.",
+    "link": "https://camelot.exchange/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/T1Bss0Xb/CAMELOT.png"
+  },
+  {
+    "title": "SpartaDex",
+    "description": "A combination of real-time strategy game set in the realities of ancient Greece and a decentralized cryptocurrency exchange.",
+    "link": "https://spartadex.io/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/3Jm7T4bh/SPARTADEX.png"
+  },
+  {
+    "title": "Vaultka",
+    "description": "The cornerstone for perpetual DEXs growth on Arbitrum, primarily focused on amplifying the value of LP tokens of Perp DEXs.",
+    "link": "https://www.vaultka.com/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/52mVHcVk/VALTYR.png"
+  },
+  {
+    "title": "Treasure",
+    "description": "Treasure is building the decentralized gaming ecosystem to transform game publishing.",
+    "link": "https://treasure.lol/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/B6YkTsYM/TREASURE.png"
+  },
+  {
+    "title": "Sanko GameCorp",
+    "description": "Crypto's gaming layer 3.",
+    "link": "https://sankodreammachine.net/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/vTxq5n6Z/SANKO.png"
   },
   {
     "title": "OnyxDAO",
