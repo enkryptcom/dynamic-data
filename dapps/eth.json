@@ -12,5 +12,12 @@
     "description": "Your All-in-one ecosystem for digital payments and exchange.",
     "isFavorites": true,
     "image": "https://raw.githubusercontent.com/wavect/wallet-dynamic-data/main/assets/icons/mountainwolf.png"
-  }
+  },
+   {
+    "title": "Ecohunt",
+    "link": "https://ecohunt.world/",
+    "description": "Hunting with future.",
+    "isFavorites": true,
+    "image": "https://raw.githubusercontent.com/wavect/wallet-dynamic-data/main/assets/icons/ecohunt.png"
+  },
 ]
