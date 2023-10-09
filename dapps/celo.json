@@ -1,5 +1,33 @@
 [
   {
+    "title": "Moola Market",
+    "link": "https://moola.market/",
+    "description": "Moola Market is a DeFi lending platform that allows loans to anyone! It supports CELO, cUSD (Celo Dollar) and cEUR (Celo Euro!)",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/8CzJ076m/moola-market.png"
+  },
+  {
+    "title": "Ubeswap",
+    "link": "https://ubeswap.org/",
+    "description": "Ubeswap is the leading DEX on Celo network!",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/mk2CXWjS/78139317.png"
+  },
+  {
+    "title": "stCELO",
+    "link": "https://stcelo.xyz/",
+    "description": "Liquid Staking on Celo.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/FHmJ0WFq/stCELO.png"
+  },
+  {
+    "title": "Toucan Protocol",
+    "link": "https://toucan.earth/",
+    "description": "Toucan provides tools that allow anyone to bring carbon credits onto the blockchain to improve the carbon market and fuel web3 innovation.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/KYPTm8sN/tc-symbol-On-Bright-color.png"
+  },
+  {
     "title": "impactMarket",
     "link": "https://www.impactmarket.com/",
     "description": "impactMarket leverages Web3 to provide accessible financial solutions, empowering financially unserved and underserved people around the world.",
