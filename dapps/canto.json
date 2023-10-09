@@ -28,11 +28,11 @@
     "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/c9fa0efb4c3bf3ef74d5ffcf1df639a14dfff1f4/assets/canto/canto.svg"
   },
   {
-    "title": "Alto",
-    "link": "https://alto.build/",
-    "description": "An NFT marketplace with 0% fees. Creators set their own royalty percentage!",
+    "title": "Blank Rasa",
+    "link": "https://www.blankrasa.com/",
+    "description": "Blank Rasa is the NFT marketplace that fiercely defends artist royalties. Trade collectibles and mint with support for ERC-1155, html, mp3, and mp4.",
     "isFavorites": false,
-    "image": "https://github-production-user-asset-6210df.s3.amazonaws.com/113649059/238222870-cd6133ee-53d2-453f-bd33-c9cfa1665375.png"
+    "image": "https://i.postimg.cc/cCXPT5ym/blank-rasa.png"
   },
   {
     "title": "Velocimeter",
@@ -49,17 +49,10 @@
     "image": "https://github-production-user-asset-6210df.s3.amazonaws.com/113649059/238222941-d75914d5-f88c-49bc-8873-2f3dae96c569.png"
   },
   {
-    "title": "Y2R Finance",
-    "link": "https://app.y2r.finance/",
-    "description": "Y2R Finance automatically harvests and reinvests your LP rewards.",
-    "isFavorites": false,
-    "image": "https://github-production-user-asset-6210df.s3.amazonaws.com/113649059/238222768-5013c841-4440-4c67-bb8c-ee6d1023eed7.png"
-  },
-  {
-    "title": "csrCanto",
-    "link": "https://csrcanto.xyz/",
+    "title": "CSRfi",
+    "link": "https://www.csrfi.xyz/",
     "description": "The ecosystem hub for everything CSR; building innovative yield-bearing blocks for Canto DeFi and NFTfi.",
     "isFavorites": false,
-    "image": "https://csrcanto.xyz/static/logo.png"
+    "image": "https://static.wixstatic.com/media/3272fd_f8799e254e83470b8faf33876969d458~mv2.png/v1/fill/w_42,h_42,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3272fd_f8799e254e83470b8faf33876969d458~mv2.png"
   }
 ]
