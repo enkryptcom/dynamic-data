@@ -1,10 +1,45 @@
 [
   {
+    "title": "Aurora +",
+    "link": "https://aurora.plus/",
+    "description": "Your gateway to the Aurora ecosystem.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/W1RGvwc8/aurora-dapp.png"
+  },
+  {
     "title": "Trisolaris",
     "link": "https://www.trisolaris.io/",
     "description": "Dex on the Aurora engine, an EVM compatible blockchain running in the near ecosystem.",
     "isFavorites": false,
     "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/trisolaris.png"
+  },
+  {
+    "title": "Bastion",
+    "link": "https://app.bastionprotocol.com/",
+    "description": "DeFi evolved. The world's first to combine Lending and Stableswap.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/MZNR7mHw/stonehead-dapp.png"
+  },
+  {
+    "title": "Aurigami",
+    "link": "https://www.aurigami.finance/",
+    "description": "Multiply with Aurigami, the noncustodial lending and borrowing haven on Aurora.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/g2qZP9Dc/aurigami-dapp.png"
+  },
+  {
+    "title": "Polaris Finance",
+    "link": "https://polarisfinance.io/",
+    "description": "Collect fees, earn yield, buy crypto with fiat, bridge your crypto across the blockchain universe and much more to come. Be a part of a permissionless decentralised exchange.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/rmz0WDLz/polaris-dapp.png"
+  },
+  {
+    "title": "Vaporwave Finance",
+    "link": "https://www.vaporwave.farm/#/aurora",
+    "description": "A yield optimizer on the Aurora blockchain.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/4nRmrwHh/vaporwave-dapp.png"
   },
   {
     "title": "motoDEX",
