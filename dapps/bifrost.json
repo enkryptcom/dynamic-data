@@ -7,6 +7,13 @@
     "image": "https://bifrost.app/images/bifrost.svg"
   },
   {
+    "title": "Omni LS",
+    "link": "https://omni.ls/",
+    "description": "Omni LS allows users to mint, redeem and exchange Bifrost Liquid Staking tokens on any chain",
+    "isFavorites": false,
+    "image": "https://cdn.liebi.com/images/OmniLS_Appicon.png"
+  }, 
+  {
     "title": "Polkadot.js",
     "description": "An all in one utility for the Polkadot ecosystem",
     "link": "https://polkadot.js.org/apps",
