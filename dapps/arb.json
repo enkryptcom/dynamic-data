@@ -61,5 +61,12 @@
     "link": "https://app.onyxdao.finance/",
     "isFavorites": false,
     "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/onyxdao.png"
+  },
+  {
+    "title": "Marginly",
+    "description": "Margin trading and derivatives on top of AMM liquidity.",
+    "link": "https://marginly.com",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/marginly.png"
   }
 ]
