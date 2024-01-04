@@ -21,6 +21,8 @@
     "no-console": "off",
     "no-plusplus": "off",
     "no-shadow": "off",
+    "no-restricted-syntax": "off",
+    "no-await-in-loop": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
