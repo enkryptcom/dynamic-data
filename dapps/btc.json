@@ -4,34 +4,34 @@
     "link": "https://unisat.io/market",
     "description": "UniSat is a bitcoin service provider that supports inscription assets.",
     "isFavorites": true,
-    "image": "https://hackmd.io/_uploads/rJhnDYLTp.png"
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/bitcoin/unisat.png"
   },
   {
     "title": "OKX Marketplace",
     "link": "https://www.okx.com/web3/marketplace/inscription/ordinals/tokens",
     "description": "One-stop hub for trading and creating BRC-20 and Ordinals collections.",
     "isFavorites": false,
-    "image": "https://hackmd.io/_uploads/BJP4kskAp.png"
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/bitcoin/okx.png"
   },
   {
     "title": "Magic Eden",
     "link": "https://magiceden.io/ordinals",
     "description": "The world of Ordinals, brought to you by the first audited Ordinals platform.",
     "isFavorites": false,
-    "image": "https://hackmd.io/_uploads/SkvVkjkAp.png"
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/bitcoin/meon.png"
   },
   {
     "title": "Ordinals.com",
     "link": "https://ordinals.com/",
     "description": "Ordinals.com is an index, block explorer, and command-line wallet. It is experimental software with no warranty.",
     "isFavorites": false,
-    "image": "https://hackmd.io/_uploads/BJPE1sJRT.png"
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/bitcoin/ordinals.png"
   },
   {
     "title": "Ordinals Wallet",
     "link": "https://ordinalswallet.com/collect",
     "description": "UniSat is a bitcoin service provider that supports inscription assets.",
     "isFavorites": false,
-    "image": "https://hackmd.io/_uploads/H1P41i1Cp.png"
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/bitcoin/ordinalwallet.png"
   }
 ]
