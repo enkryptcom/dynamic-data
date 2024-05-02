@@ -12,6 +12,7 @@ const ChangellyPlatforms: {
   [NetworkName.Klaytn]: "klaytn",
   [NetworkName.Optimism]: "optimism",
   [NetworkName.Moonbeam]: "glmr",
+  [NetworkName.Base]: "BASE",
 };
 const ChangellyContractMap: {
   [key in NetworkName]?: Record<string, string>;
