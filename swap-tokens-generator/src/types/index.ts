@@ -12,6 +12,8 @@ export enum NetworkName {
   Aurora = "AURORA",
   Moonbeam = "GLMR",
   ZkSync = "zkSync",
+  Base = "BASE",
+  MaticZK = "MATICZK",
 }
 
 export enum NetworkType {

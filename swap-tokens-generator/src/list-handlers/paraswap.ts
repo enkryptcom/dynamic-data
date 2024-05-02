@@ -11,6 +11,9 @@ export const supportedChains: NetworkName[] = [
   NetworkName.Avalanche,
   NetworkName.Fantom,
   NetworkName.Arbitrum,
+  NetworkName.Base,
+  NetworkName.Optimism,
+  NetworkName.MaticZK,
 ];
 
 export default async (chainName: NetworkName): Promise<Record<string, Token>> =>

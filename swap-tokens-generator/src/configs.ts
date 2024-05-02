@@ -130,6 +130,26 @@ const CHAIN_CONFIGS: Record<NetworkName, ChainConfig> = {
     name: "Ethereum",
     symbol: "ETH",
   },
+  [NetworkName.Base]: {
+    chainId: "8453",
+    type: NetworkType.EVM,
+    cgId: "ethereum",
+    decimals: 18,
+    logoURI:
+      "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+    name: "Ethereum",
+    symbol: "ETH",
+  },
+  [NetworkName.MaticZK]: {
+    chainId: "1101",
+    type: NetworkType.EVM,
+    cgId: "matic-network",
+    decimals: 18,
+    logoURI:
+      "https://tokens.1inch.io/0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0.png",
+    name: "Polygon Matic",
+    symbol: "MATIC",
+  },
 };
 
 const NATIVE_ADDRESS = "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";

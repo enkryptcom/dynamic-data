@@ -16,6 +16,7 @@ export const supportedChains: NetworkName[] = [
   NetworkName.Klaytn,
   NetworkName.Aurora,
   NetworkName.ZkSync,
+  NetworkName.Base,
 ];
 
 export default async (chainName: NetworkName): Promise<Record<string, Token>> =>
