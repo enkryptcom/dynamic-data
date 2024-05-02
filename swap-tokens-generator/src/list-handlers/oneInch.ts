@@ -19,10 +19,13 @@ export const supportedChains: NetworkName[] = [
   NetworkName.Base,
 ];
 
-export default async (chainName: NetworkName): Promise<Record<string, Token>> =>
+const requestOneInch = async (
+  chainName: NetworkName
+): Promise<Record<string, Token>> =>
   fetch(`${ONEINCH_BASE}${CHAIN_CONFIGS[chainName].chainId}/tokens`)
     .then((res) => res.json())
     .then((_json) => {
+      if (!_json.tokens) return requestOneInch(chainName);
       const json = _json as {
         tokens: Record<string, Token>;
       };
@@ -32,3 +35,5 @@ export default async (chainName: NetworkName): Promise<Record<string, Token>> =>
       });
       return json.tokens;
     });
+
+export default requestOneInch;

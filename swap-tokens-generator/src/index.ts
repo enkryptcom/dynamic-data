@@ -26,6 +26,7 @@ const runner = async () => {
     await coingecko(chain).then((results) => {
       coingeckoTokens[chain] = results;
     });
+    await new Promise((r) => setTimeout(r, 1000));
   }
   for (const chain of oneInchSupportedChains) {
     await oneInch(chain).then((results) => {
