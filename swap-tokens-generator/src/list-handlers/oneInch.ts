@@ -2,7 +2,7 @@ import { CHAIN_CONFIGS } from "@src/configs";
 import { NetworkName, Token } from "@src/types";
 import fetch from "node-fetch";
 
-const ONEINCH_BASE = `https://partners.mewapi.io/oneinch/v5.2/`;
+const ONEINCH_BASE = `https://partners.mewapi.io/oneinch/v6.0/`;
 
 export const supportedChains: NetworkName[] = [
   NetworkName.Ethereum,
