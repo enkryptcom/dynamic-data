@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Thirdfy",
+    "link": "https://third.trade/swap/Arthera/WAA",
+    "description": "A DEX and Bridging platform native to Arthera.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/vgnKd8MT/Screenshot-2024-05-07-at-12-23-1.png"
+  },
+  {
+    "title": "Elk Finance",
+    "link": "https://app.elk.finance/",
+    "description": "Web3's most powerful and convenient interoperability network.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/B8kzyLrR/spaces-MI8z-Wn-Xu9eyqfz97rj0-K-uploads-git-blob-370ec90af065893278fe1601218280ce2a36db9a-Elk-Logo-512x5.png"
+  },
+  {
+    "title": "dropspace",
+    "link": "https://www.dropspace.art/launch-with-us",
+    "description": "A self-service NFT minting platform for collections, experiences, tickets, and more.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/qtzYjX58/MBy-x-LCO-400x400-1.png"
+  },
+  {
+    "title": "Baby Turu",
+    "link": "https://turu.world/",
+    "description": "A memecoin and NFT collection on available on Arthera.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/HrSRwPBY/na-Y9ib-T5-400x400-1.png"
+  }
+]
