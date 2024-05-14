@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "title": "OKX DEX",
+    "link": "https://www.okx.com/oktc/swap",
+    "description": "Faster, better, stronger than your average crypto exchange.",
+    "isFavorites": true,
+    "image": "https://i.postimg.cc/rmGt9dqx/image-1684.png"
+  },
+  {
+    "title": "OKT Liquid Staking",
+    "link": "https://www.okx.com/oktc/liquid-staking/stake",
+    "description": "OKT Liquid Staking is a liquidity staking solution on OKTC.",
+    "isFavorites": true,
+    "image": "https://i.postimg.cc/rmGt9dqx/image-1684.png"
+  },
+  {
+    "title": "CherrySwap",
+    "link": "https://www.cherryswap.net/home/",
+    "description": "Automatic market-making protocol based on OKT Chain.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/cJn3r9jD/JH86g-KQT-400x400-1.png"
+  },
+  {
+    "title": "Wing",
+    "link": "https://wing.finance/",
+    "description": "Wing is a cross-chain decentralized lending platform.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/DZ3XsQ37/image-1685.png"
+  }
+]
