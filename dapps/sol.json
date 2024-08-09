@@ -1,0 +1,44 @@
+[
+  {
+    "title": "deBridge",
+    "link": "https://app.debridge.finance/",
+    "description": "Bridge between Solana and popular EVM chains.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/SnrnLnQM/image-1393.png"
+  },
+  {
+    "title": "Jupiter",
+    "link": "https://jup.ag/",
+    "description": "The go-to DEX aggregator on Solana.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/Q9RCN5mR/image-1392.png"
+  },
+  {
+    "title": "Tensor Trade",
+    "link": "https://www.tensor.trade/",
+    "description": "An NFT marketplace built on Solana.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/zLxRNV9r/image-1395.png"
+  },
+  {
+    "title": "AssetDash",
+    "description": "Track your portfolio across Solana and EVM ecosystems.",
+    "link": "https://www.assetdash.com/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/MM4Mcg63/image-1394.png"
+  },
+  {
+    "title": "Raydium",
+    "link": "https://raydium.io/",
+    "description": "A popular DEX for trading tokens on Solana.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/QBcSXkjT/image-1397.png"
+  },
+  {
+    "title": "pump.fun",
+    "description": "Launch a coin that is instantly tradeable for under $2 in one click.",
+    "link": "https://pump.fun/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/cgZh6gJ5/image-1396.png"
+  }
+]
