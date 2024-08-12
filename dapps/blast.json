@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Blast Bridge",
+    "link": "https://blast.io/en/bridge",
+    "description": "Official bridge to Blast L2.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/1nTP03yr/Clip-path-group.png"
+  },
+  {
+    "title": "Blur Marketplace",
+    "link": "https://blur.io/",
+    "description": "An NFT Marketplace with native Blast compatibility, launched by the founder of Blast.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/Lhc2n5CH/image-1429.png"
+  },
+  {
+    "title": "YES Arena",
+    "link": "https://yes.money/",
+    "description": "An onchain raffle system built on Blast.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/MfQw9JT2/image-1430.png"
+  },
+  {
+    "title": "Crypto Valleys",
+    "link": "https://cryptovalleys.io/",
+    "description": "A gamified and decentralized exchange on Blast L2.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/LYh2Z1Fs/image-1431.png"
+  }
+]
