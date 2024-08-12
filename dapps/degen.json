@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Degen Bridge",
+    "link": "https://bridge.degen.tips/",
+    "description": "The official bridge to Degen chain.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/3yDwwxzp/image-1422.png"
+  },
+  {
+    "title": "Simple NFTs",
+    "link": "https://simplenftsforsimpledegens.xyz/",
+    "description": "A Degen-native NFT marketplace. Built by degens for degens.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/dZJQnm3m/image-1423.png"
+  },
+  {
+    "title": "garden.",
+    "link": "https://garden.wtf/",
+    "description": "A collective onchain art project.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/S26NWtSx/image-1424.png"
+  },
+  {
+    "title": "Degen.game",
+    "link": "https://www.degen.game/",
+    "description": "Find new and trending frames on Warpcast.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/JDVzHWWF/Group-1469.png"
+  },
+  {
+    "title": "Button Game",
+    "link": "https://buttongame.xyz/",
+    "description": "Last person to click the button wins all the $Degen!",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/jD15K73t/image-1425.png"
+  }
+]
