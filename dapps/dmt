@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Sanko Bridge",
+    "link": "https://sanko.xyz/bridge",
+    "description": "The official Sanko GameCorp bridge.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/5Y88kCWN/image-1421.png"
+  },
+  {
+    "title": "Sanko Swap",
+    "link": "https://swap.sanko.xyz/",
+    "description": "Sanko GameCorp’s built in exchange. Swap Sanko assets here!",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/5Y88kCWN/image-1421.png"
+  },
+  {
+    "title": "SankoPets!",
+    "link": "https://sanko.pet/",
+    "description": "Sanko’s flagship dApp. Collect Buns and earn rewards.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/vcYSfQ56/Screenshot-2024-08-06-at-3-51-41-PM-1.png"
+  },
+  {
+    "title": "SankoTV",
+    "link": "https://sanko.tv/",
+    "description": "An onchain streaming platform powered by Sanko GameCorp.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/0bVXCLCX/image-1420.png"
+  },
+  {
+    "title": "Sudoswap",
+    "link": "https://sudoswap.xyz/#/",
+    "description": "An NFT marketplace with support for Sanko assets.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/jCr1q65c/image-1419.png"
+  },
+  {
+    "title": "Snako",
+    "link": "https://snako.wtf/",
+    "description": "An onchain version of “Snake”. How many eggs can you collect?",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/kR9Wrg7N/Screenshot-2024-08-06-at-3-37-21-PM-1.png"
+  },
+  {
+    "title": "Fanko.tech",
+    "link": "https://fanko.tech/",
+    "description": "A launchpad for memecoins on Sanko.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/RqQDW3JB/fanko-logo-1.png"
+  }
+]
