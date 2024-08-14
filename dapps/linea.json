@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Across Protocol",
+    "link": "https://app.across.to/",
+    "description": "Bridge from EVM chains to Linea",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/rR1ZhHH9/image-1450.png"
+  },
+  {
+    "title": "Battlemon",
+    "link": "https://battlemon.com/",
+    "description": "Cross-chain dynamic NFT and game built on Linea.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/njQPmrYg/image-1451.png"
+  },
+  {
+    "title": "ICHI",
+    "link": "https://app.ichi.org/",
+    "description": "A concentrated liquidity manager for trading on Linea.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/xNDF3Q6C/image-1452.png"
+  },
+  {
+    "title": "XFai",
+    "link": "https://app.xfai.com/swap",
+    "description": "The most capital-efficient DEX, swap any token for any other token on Linea.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/Ff6613c0/image-1453.png"
+  }
+]
