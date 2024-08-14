@@ -14,12 +14,15 @@ export enum NetworkName {
   ZkSync = "zkSync",
   Base = "BASE",
   MaticZK = "MATICZK",
+  Solana = "Solana",
+  Rootstock = "Rootstock",
 }
 
 export enum NetworkType {
   EVM = "evm",
   Substrate = "substrate",
   Bitcoin = "bitcoin",
+  Solana = "solana",
 }
 
 export interface ChainConfig {

@@ -8,10 +8,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean --sourcemap",
     "lint": "prettier --write .",
     "test": "",
-    "update:lists": "node dist/index.js"
+    "update:lists": "node --enable-source-maps --unhandled-rejections=strict dist/index.js"
   },
   "engines": {
     "node": ">=14.15.0"

@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 
-const ETHVM_BASE = `https://api-v2.ethvm.dev/`;
+const ETHVM_BASE = `https://api-v3.ethvm.dev/`;
 
 const ethvmPost = (requestData: string): Promise<any> =>
   fetch(ETHVM_BASE, {
@@ -14,6 +14,7 @@ const ethvmPost = (requestData: string): Promise<any> =>
 export const getPriceByIDs = (
   ids: string[]
 ): Promise<Record<string, number | undefined>> => {
+  // TODO: chunk this up
   const params = ids.map((i) => `\\"${i}\\"`).join(", ");
   return ethvmPost(
     `{"operationName":null,"variables":{},"query":"{\\n  getCoinGeckoTokenMarketDataByIds(coinGeckoTokenIds: [${params}]) {\\n    current_price\\n  }\\n}\\n"}`

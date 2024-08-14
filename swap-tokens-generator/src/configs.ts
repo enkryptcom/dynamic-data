@@ -150,6 +150,24 @@ const CHAIN_CONFIGS: Record<NetworkName, ChainConfig> = {
     name: "Polygon Matic",
     symbol: "MATIC",
   },
+  [NetworkName.Solana]: {
+    chainId: "900",
+    type: NetworkType.Solana,
+    cgId: "solana",
+    decimals: 9,
+    logoURI: "https://assets.coingecko.com/coins/images/4128/standard/solana.png",
+    name: "Solana",
+    symbol: "SOL",
+  },
+  [NetworkName.Rootstock]: {
+    chainId: "30",
+    type: NetworkType.EVM,
+    cgId: "rootstock",
+    decimals: 18,
+    logoURI: "https://assets.coingecko.com/coins/images/5070/standard/RBTC-logo.png",
+    name: "Rootstock Smart Bitcoin",
+    symbol: "RBTC",
+  },
 };
 
 const NATIVE_ADDRESS = "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";

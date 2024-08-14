@@ -1,6 +1,19 @@
 import { NATIVE_ADDRESS } from "@src/configs";
 import { NetworkName, NetworkType, Token } from "@src/types";
 
+/**
+ * (our internal) Network ID -> Changelly Blockchain ID
+ *
+ * Subset of networks that Changelly supports cross-chain swaps on.
+ 
+ * If a network is not in this list then its tokens will be dropped from the
+ * final json files outputs.
+ *
+ * ```sh
+ * # To get a list of Changely tokens with their blockchain id's
+ * curl https://partners.mewapi.io/changelly-v2 -X POST -H Accept:application/json -H Content-Type:application/json --data '{"id":"1","jsonrpc":"2.0","method":"getCurrenciesFull","params":{}}'
+ * ````
+ */
 const ChangellyPlatforms: {
   [key in NetworkName]?: string;
 } = {
@@ -13,7 +26,9 @@ const ChangellyPlatforms: {
   [NetworkName.Optimism]: "optimism",
   [NetworkName.Moonbeam]: "glmr",
   [NetworkName.Base]: "BASE",
+  [NetworkName.Rootstock]: "RBTC",
 };
+
 const ChangellyContractMap: {
   [key in NetworkName]?: Record<string, string>;
 } = {
@@ -32,6 +47,7 @@ const ChangellyContractMap: {
   },
 };
 
+// Used to override native tokens received from the Changelly API
 const NativeTokens: Record<string, Token> = {
   dot: {
     address: NATIVE_ADDRESS,
@@ -80,6 +96,7 @@ const NativeTokens: Record<string, Token> = {
     type: NetworkType.Bitcoin,
     cgId: "dogecoin",
   },
+  // TODO: add RBTC?
 };
 
 export { ChangellyContractMap, ChangellyPlatforms, NativeTokens };
