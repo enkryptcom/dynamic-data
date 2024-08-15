@@ -35,7 +35,9 @@ export const supportedChains: NetworkName[] = [
 /**
  * Request all (verified) swappable tokens on the SolanaJupiter exchange
  *
- * curl -s 'https://tokens.jup.ag/tokens?tags=verified' -H Accept:application/json
+ * ```sh
+ * curl 'https://tokens.jup.ag/tokens?tags=verified' -H Accept:application/json
+ * ```
  */
 async function requestJupiter(): Promise<Record<string, Token>> {
   const res = await fetch(`${JUPITER_BASE}tokens?tags=verified`)
