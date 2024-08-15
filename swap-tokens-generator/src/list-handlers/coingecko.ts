@@ -24,6 +24,8 @@ const cgPlatform: Record<NetworkName, string> = {
   [NetworkName.MaticZK]: "polygon-zkevm",
   [NetworkName.Rootstock]: "rootstock",
   [NetworkName.Solana]: "solana",
+  [NetworkName.Telos]: "telos",
+  [NetworkName.Blast]: "blast",
 };
 export const supportedChains: NetworkName[] = [
   NetworkName.Ethereum,
@@ -42,6 +44,8 @@ export const supportedChains: NetworkName[] = [
   NetworkName.MaticZK,
   NetworkName.Rootstock,
   NetworkName.Solana,
+  NetworkName.Telos,
+  NetworkName.Blast,
 ];
 export const getTrendingTokenId = async (): Promise<Record<string, number>> =>
   fetch(`${CG_API_BASE}search/trending`)

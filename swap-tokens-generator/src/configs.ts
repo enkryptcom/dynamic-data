@@ -168,6 +168,24 @@ const CHAIN_CONFIGS: Record<NetworkName, ChainConfig> = {
     name: "Rootstock Smart Bitcoin",
     symbol: "RBTC",
   },
+  [NetworkName.Telos]: {
+    chainId: "40",
+    type: NetworkType.EVM,
+    cgId: "telos",
+    decimals: 18,
+    logoURI: "https://assets.coingecko.com/coins/images/7588/standard/tlos_png.png",
+    name: "Telos",
+    symbol: "tlos",
+  },
+  [NetworkName.Blast]: {
+    chainId: "81457",
+    type: NetworkType.EVM,
+    cgId: "ethereum",
+    decimals: 18,
+    logoURI: "https://assets.coingecko.com/coins/images/35494/standard/Blast.jpg",
+    name: "Ethereum",
+    symbol: "ETH",
+  },
 };
 
 const NATIVE_ADDRESS = "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
