@@ -1,0 +1,30 @@
+[
+  {
+    "title": "QuickSwap",
+    "link": "https://quickswap.exchange/",
+    "description": "Swap tokens and other assets on Immutable zkEVM.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/GHfgXcBQ/image-1438.png"
+  },
+  {
+    "title": "overtake.world",
+    "link": "https://overtake.world/",
+    "description": "Onchain gaming and rewards. Where users play, build and earn.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/XryHhTd0/image-1437.png"
+  },
+  {
+    "title": "Boomland",
+    "link": "https://boomland.io/",
+    "description": "Boomland is dedicated to bringing quality gaming experiences to Immutable zkEVM.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/p9f0VzsG/image-1436.png"
+  },
+  {
+    "title": "Baby Shark Universe",
+    "link": "https://babysharkuniverse.io/",
+    "description": "venture in the vast open-world on Baby Shark Universe.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/ftM8VyFw/image-1435.png"
+  }
+]
