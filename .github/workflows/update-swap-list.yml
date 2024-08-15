@@ -15,8 +15,8 @@ jobs:
           node-version: "20.16.0"
           cache: "yarn"
           cache-dependency-path: swap-tokens-generator/yarn.lock
-      - run: cd swap-tokens-generator && npm install && npm run build
-      - run: cd swap-tokens-generator && npm run update:lists
+      - run: cd swap-tokens-generator && yarn install && yarn run build
+      - run: cd swap-tokens-generator && yarn run update:lists
       - run: cd swap-tokens-generator && mv dist/lists/*.json ../swaplists
       - uses: EndBug/add-and-commit@v9
         with:
