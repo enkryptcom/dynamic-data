@@ -15,7 +15,7 @@ export enum NetworkName {
   Base = "BASE",
   MaticZK = "MATICZK",
   Solana = "SOLANA",
-  Rootstock = "ROOTSTOCK",
+  Rootstock = "Rootstock",
 }
 
 export enum NetworkType {
