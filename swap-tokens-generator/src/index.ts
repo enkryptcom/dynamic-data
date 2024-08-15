@@ -185,6 +185,11 @@ const runner = async () => {
     if (native) tokens.unshift(native);
     topTokens.sort((a, b) => a.rank - b.rank);
     trendingTokens.sort((a, b) => a.rank - b.rank);
+    changellyTokens = formatChangellyCurrencies(
+      changellyTokens,
+      tokens,
+      chain
+    );
     console.info(
       `Finished aggregating tokens`
       + `  chain=${chain}`
@@ -193,26 +198,14 @@ const runner = async () => {
       + `  includedTokens=${includedTokens.size}`
       + `  priceMissingIds=${priceMissingIds.length}`
     )
-    console.info(
-      `Formatting changelly currencies`
-      + `  chain=${chain}`
-      + `  changelly=${changellyTokens.length}`
-      + `  tokens=${tokens.length}`
-    )
-    changellyTokens = formatChangellyCurrencies(
-      changellyTokens,
-      tokens,
-      chain
-    );
     // For any tokens we couldn't find prices for, get their prices from EthVM instead
-    console.info(`Requesting missing prices from EthVM  chain=${chain}  missing=${priceMissingIds.length}`)
     getPriceByIDs(priceMissingIds).then((missingPrices) => {
       ethvmPrices = { ...missingPrices, ...ethvmPrices };
       const filename = join('dist', 'lists', `${chain}.json`)
       console.info(
         `Saving prices`
-        + `  chain=${chain}`
         + `  filename=${filename}`
+        + `  chain=${chain}`
         + `  all=${tokens.length}`
         + `  trending=${trendingTokens.length}`
         + `  top=${topTokens.length}`

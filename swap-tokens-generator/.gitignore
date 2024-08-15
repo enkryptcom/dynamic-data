@@ -106,3 +106,5 @@ typings/
 dist/lists/*.json
 dist/*js
 dist/*.ts
+dist/*js.map
+dist/*.d.mts
