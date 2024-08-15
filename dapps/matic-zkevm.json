@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Quickswap",
+    "link": "https://quickswap.exchange/#/",
+    "description": "QuickSwap is a decentralized exchange (DEX) on the Polygon zkEVM network.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/QuickSwap/quickswap-docs/9a032ba43e9da03f703f5a284e1766591669dd0c/static/img/logo_circle.png"
+  },
+  {
+    "title": "Orbiter Finance",
+    "link": "https://www.orbiter.finance/",
+    "description": "A decentralized cross-rollup Layer 2 bridge with a contract only on the destination side. Move funds from other L2s to Polygon zkEVM.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/Orbiter-Finance/OrbiterFE-V2/884dfefbfe0c6ede194f084e1712ae7ee22a36e9/src/icons/v2/light-logo-mobile.svg"
+  }
+]

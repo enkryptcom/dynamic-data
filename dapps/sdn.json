@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Shiden Portal",
+    "link": "https://portal.astar.network/#/shiden/",
+    "description": "Manage Substrate and EVM assets all in one place",
+    "isFavorites": false,
+    "image": "https://portal.astar.network/icons/astar.png"
+  },
+  {
+    "title": "Celer cBridge",
+    "link": "https://cbridge.celer.network/",
+    "description": "Celer cBridge is a multi-chain network that enables instant, low-cost and ANY-to-ANY value transfers within and across different blockchains.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/shiden/celer.webp"
+  },
+  {
+    "title": "Community Faucet",
+    "link": "https://www.as-faucet.xyz/",
+    "description": "Unofficial Multi-Chain Faucet It is made up of volunteer support, and NFTs are distributed to supporters.",
+    "isFavorites": false,
+    "image": "https://github.com/enkryptcom/dynamic-data/blob/main/assets/shiden/community-faucet.png?raw=true"
+  },
+  {
+    "title": "KACO Finance",
+    "link": "https://www.kaco.finance/",
+    "description": "Kaco Finance is a cross-chain decentralized trading platform based on Binance Smart Chain and Kusama parachains",
+    "isFavorites": false,
+    "image": "https://github.com/enkryptcom/dynamic-data/blob/main/assets/shiden/kaco.png?raw=true"
+  },
+  {
+    "title": "Standard Protocol",
+    "link": "https://standard.tech/",
+    "description": "Standard Protocol is the first Self-Sovereign Stablecoin protocol that embraces and visions the true decentralized form of Web3.0.",
+    "isFavorites": false,
+    "image": "https://github.com/enkryptcom/dynamic-data/blob/main/assets/shiden/standard-protocol.png?raw=true"
+  }
+]

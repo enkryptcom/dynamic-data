@@ -1,0 +1,53 @@
+{
+  "name": "@enkryptcom/phishing-detect",
+  "version": "0.0.1",
+  "description": "Aggregate all phishing lists and create a merkle tree proof to validate without having to download whole list",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean --sourcemap",
+    "lint": "prettier --write .",
+    "test": "",
+    "update:lists": "node --enable-source-maps dist/index.js"
+  },
+  "engines": {
+    "node": ">=20.16.0"
+  },
+  "dependencies": {
+    "ethereumjs-util": "^7.1.4",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.7.11",
+    "@types/chai": "^4.3.17",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^22.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.1.0",
+    "@typescript-eslint/parser": "^8.1.0",
+    "chai": "^5.1.1",
+    "eslint": "^9.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-module-resolver": "^1.4.0",
+    "mocha": "^10.7.3",
+    "prettier": "^3.3.3",
+    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "8.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enkryptcom/dynamic-data"
+  },
+  "keywords": [],
+  "author": "kvhnuke",
+  "license": "MIT"
+}

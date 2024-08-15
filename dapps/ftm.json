@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Equalizer",
+    "link": "https://equalizer.exchange/",
+    "description": "Equalizer Exchange is a DEX that uses a vote escrowed model to drive Liquidity to the highest volume pairs.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/equalizer.png"
+  },
+  {
+    "title": "SpookySwap",
+    "link": "https://spooky.fi/",
+    "description": "SpookySwap is the leading AMM on Fantom, utilizing the chain's low fees and fast transaction times to create a seamless swapping experience.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/spookyswap.webp"
+  },
+  {
+    "title": "Mummy Finance",
+    "description": "Unparalled Decentralized Spot and Perp Exchange on Fantom and Optimism to trade $BTC, $ETH, $FTM, $OP.",
+    "link": "https://www.mummy.finance/",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/mummyfinance.png"
+  }
+]

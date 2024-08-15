@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Godwoken Bridge",
+    "link": "https://bridge.godwoken.io/",
+    "description": "The official Godwoken bridge.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/s1L7G1G3/Group-1475.png"
+  },
+  {
+    "title": "YokaiSwap",
+    "link": "https://www.yokaiswap.com/",
+    "description": "A DEX built on Godwoken. Swap assets here!",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/21QZtwc5/image-1439.png"
+  },
+  {
+    "title": "Hadouken Finance",
+    "link": "https://hadouken.finance/",
+    "description": "Borrowing and lending DeFi platform for Godwoken.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/hXWmMw0w/image-1440.png"
+  },
+  {
+    "title": "Nervape",
+    "link": "https://www.nervape.com/",
+    "description": "An NFT marketplace and collection on Godwoken.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/mtFMYR7C/image-1441.png"
+  }
+]

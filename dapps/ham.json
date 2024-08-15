@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Ham Bridge",
+    "link": "https://ham.fun/bridge",
+    "description": "The official bridge for Ham chain.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/wRMY4W5z/Group-1474.png"
+  },
+  {
+    "title": "Floaties",
+    "link": "https://ham.fun/floaties",
+    "description": "Create your own emoji-based floaties for tipping on Warpcast. ",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/mhps1sRg/image-1427.png"
+  },
+  {
+    "title": "Poster Fun",
+    "link": "https://www.poster.fun/",
+    "description": "Easily find and create new frames for Warpcast.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/Jtz8hhfF/Group-1472.png"
+  },
+  {
+    "title": "Mint Club",
+    "link": "https://mint.club/",
+    "description": "An NFT and token launchpad that uses bonding curves for fair launches.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/7GmyVv2X/Group-1473.png"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Telos Bridge",
+    "link": "https://bridge.telos.net/bridge",
+    "description": "The official bridge to Telos EVM.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/RN3bt0H0/Screenshot-2024-08-06-at-4-27-50-PM-1.png"
+  },
+  {
+    "title": "OmniDEX",
+    "link": "https://app.omnidex.finance/#/trade",
+    "description": "A Decentralized exchange built for Telos EVM.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/cvw9D5Ty/image-1432.png"
+  },
+  {
+    "title": "Conkis",
+    "link": "https://conkis.com/",
+    "description": "A competitive, free-to-play, turn based, tactical strategy game built on Telos EVM. ",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/NLCzLXLV/image-1434.png"
+  },
+  {
+    "title": "Swords of Blood",
+    "link": "https://swordsofblood.com/",
+    "description": "An onchain game built on Telos EVM. The self-proclaimed “Diablo Killer”.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/mt0pyGYy/image-1433.png"
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "name": "Enkrypt",
+  "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/enkrypt/enkrypt-sign-color.png",
+  "keywords": ["defi"],
+  "timestamp": "2023-02-09T20:08:52.979+00:00",
+  "tokens": [
+    {
+      "chainId": 280,
+      "address": "0x3e7676937a7e96cfb7616f255b9ad9ff47363d4b",
+      "name": "DAI",
+      "symbol": "DAI",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/9956/thumb/4943.png?1636636734"
+    },
+    {
+      "chainId": 280,
+      "address": "0x40609141db628beee3bfab8034fc2d8278d0cc78",
+      "name": "ChainLink Token (goerli)",
+      "symbol": "LINK",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1547034700"
+    },
+    {
+      "chainId": 280,
+      "address": "0x0faf6df7054946141266420b43783387a78d82a9",
+      "name": "USD Coin (goerli)",
+      "symbol": "USDC",
+      "decimals": 6,
+      "logoURI": "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389"
+    },
+    {
+      "chainId": 280,
+      "address": "0x0bfce1d53451b4a8175dd94e6e029f7d8a701e9c",
+      "name": "wBTC",
+      "symbol": "wBTC",
+      "decimals": 8,
+      "logoURI": "https://assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png?1548822744"
+    },
+    {
+      "chainId": 280,
+      "address": "0x350cfa64eb8418ac090c8586e2ebc6f6e869435c",
+      "name": "Buidl Bux",
+      "symbol": "BUIDL-old",
+      "decimals": 2,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/zksync/zksync.svg"
+    },
+    {
+      "chainId": 280,
+      "address": "0xf551954D449eA3Ae4D6A2656a42d9B9081B137b4",
+      "name": "Buidl Bux",
+      "symbol": "BUIDL",
+      "decimals": 2,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/zksync/zksync.svg"
+    }
+  ],
+  "version": {
+    "major": 0,
+    "minor": 1,
+    "patch": 0
+  }
+}

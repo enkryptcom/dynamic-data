@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Optimism Bridge",
+    "link": "https://app.optimism.io/bridge/deposit",
+    "description": "Transfer assets to and from Optimism",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/ethereum-optimism/brand-kit/main/assets/svg/Profile-Logo.svg"
+  },
+  {
+    "title": "Unstoppable Domains",
+    "link": "https://unstoppabledomains.com/?ref=daf66e72f515449",
+    "description": "Simplifying crypto payments and making web3 easy with NFT domains.",
+    "isFavorites": false,
+    "image": "https://dashboard-assets.dappradar.com/document/11097/unstoppabledomains-dapp-collectibles-ethereum-logo-166x166_013c8d4a01678362ad762e64b107f1f7.png"
+  },
+  {
+    "title": "Galxe",
+    "link": "https://galxe.com/",
+    "description": "The largest Web3 credential data network in the world.",
+    "isFavorites": false,
+    "image": "https://github.com/enkryptcom/dynamic-data/blob/main/assets/optimism/galxe.png?raw=true"
+  },
+  {
+    "title": "Uniswap",
+    "link": "https://app.uniswap.org/",
+    "description": "A protocol for trading and automated liquidity provision.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/c9fa0efb4c3bf3ef74d5ffcf1df639a14dfff1f4/assets/optimism/uniswap.svg"
+  },
+  {
+    "title": "PoolTogether",
+    "link": "https://app.pooltogether.com/",
+    "description": "Win by saving. PoolTogether is a crypto-powered savings protocol based on Premium Bonds. Save money and have a chance The world's savings protocol, run by you.",
+    "isFavorites": false,
+    "image": "https://github.com/enkryptcom/dynamic-data/blob/main/assets/optimism/pooltogether.png?raw=true"
+  },
+  {
+    "title": "Perpetual Protocol",
+    "link": "https://perp.com/",
+    "description": "Perpetual Protocol is an on-chain perpetual futures DEX with deep liquidity and builder-ready composability.",
+    "isFavorites": false,
+    "image": "https://github.com/enkryptcom/dynamic-data/blob/main/assets/optimism/perpetual.png?raw=true"
+  },
+  {
+    "title": "Rubicon",
+    "link": "https://www.rubicon.finance/",
+    "description": "Rubicon is an order book protocol for Ethereum, built on L2 networks to give traders cheap transactions and instant confirmations.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/optimism/rubicon.webp"
+  }
+]

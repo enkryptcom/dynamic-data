@@ -1,0 +1,21 @@
+{
+  "name": "Enkrypt",
+  "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/enkrypt/enkrypt-sign-color.png",
+  "keywords": ["defi"],
+  "timestamp": "2023-02-21T20:08:52.979+00:00",
+  "tokens": [
+    {
+      "chainId": 324,
+      "address": "0x1bba25233556a7c3b41913f35a035916dbed1664",
+      "name": "BUIDL Bux",
+      "symbol": "BUIDL",
+      "decimals": 2,
+      "logoURI": "https://raw.githubusercontent.com/MyEtherWallet/ethereum-lists/master/src/icons/BUIDL-0x1bbA25233556a7C3b41913F35A035916DbeD1664.png"
+    }
+  ],
+  "version": {
+    "major": 0,
+    "minor": 1,
+    "patch": 0
+  }
+}

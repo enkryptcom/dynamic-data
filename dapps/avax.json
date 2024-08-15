@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Avalanche Bridge",
+    "link": "https://core.app/bridge/",
+    "description": "Transfer assets to and from Avalanche",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/avax.png"
+  },
+  {
+    "title": "Trader Joe",
+    "link": "https://traderjoexyz.com/",
+    "description": "Trader Joe is a one-stop-shop decentralized trading platform and the creator of Liquidity Book, the most efficient AMM in DeFi. ",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/traderjoe.png"
+  },
+  {
+    "title": "Stargate Finance",
+    "link": "https://stargate.finance/",
+    "description": "Stargate is a fully composable liquidity transport protocol that lives at the heart of omnichain DeFi.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/stargate.png"
+  },
+  {
+    "title": "Aave V3",
+    "description": "The Aave Protocol is decentralised non-custodial liquidity protocol where users can participate as suppliers, borrowers or liquidators.",
+    "link": "https://app.aave.com/",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/aavev3.png"
+  }
+]

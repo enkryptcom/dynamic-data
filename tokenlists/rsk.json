@@ -1,0 +1,397 @@
+{
+  "name": "Enkrypt",
+  "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/enkrypt/enkrypt-sign-color.png",
+  "keywords": ["defi"],
+  "timestamp": "2023-02-07T20:08:52.979+00:00",
+  "tokens": [
+    {
+      "chainId": 30,
+      "address": "0x2aCc95758f8b5F583470bA265Eb685a8f45fC9D5",
+      "name": "RIF",
+      "symbol": "RIF",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/rif.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x2d919f19D4892381d58EdEbEcA66D5642ceF1A1F",
+      "name": "RIF Dollar on Chain",
+      "symbol": "RDOC",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/rdoc.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xF4d27C56595eD59B66cC7f03CFF5193E4Bd74a61",
+      "name": "RIF Pro",
+      "symbol": "RIFP",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/rifpro.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xE700691Da7B9851F2F35f8b8182C69C53ccad9DB",
+      "name": "Dollar on Chain",
+      "symbol": "DOC",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/doc.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x440cd83C160de5C96DDb20246815EA44C7Abbca8",
+      "name": "BitPro",
+      "symbol": "BPro",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/bpro.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xe0CFF8a40f540657c62EB4CAC34b915e5ed8d8FF",
+      "name": "Invecoin",
+      "symbol": "INV",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/inv.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x6B1a73d547F4009A26B8485b63D7015D248AD406",
+      "name": "Dai Stablecoin on RSK",
+      "symbol": "rDAI",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/dai.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x967f8799aF07DF1534d48A95a5C9FEBE92c53ae0",
+      "name": "Wrapped RBTC on RSK",
+      "symbol": "WRBTC",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/wrbtc.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x818C0A92aae155e93419B5a7323E8e8AE649F287",
+      "name": "RSK Swap LP RIF/RBTC",
+      "symbol": "🦄RBTC:RIF",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/rif-rbtc.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xDA066D0fD764c8035Cd56798F0F0D2FE719CC62B",
+      "name": "RSK Swap LP RIF/DOC",
+      "symbol": "🦄RIF:DOC",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/rif-doc.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xe66388940C3db98a7b9Fcf628702FFBEc3a106a3",
+      "name": "RSK Swap LP BPRO/DOC",
+      "symbol": "🦄BPRO:DOC",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/bpro-doc.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x90Fc6FBb9C7ecfeCF0AcB44385E6a4D076817feb",
+      "name": "RSK Swap LP RDOC/DOC",
+      "symbol": "🦄RDOC:DOC",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/rdoc-doc.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x22DaA89FDF6FB6a6771652141E6F18b8EBD86960",
+      "name": "RSK Swap LP rDAI/DOC",
+      "symbol": "🦄DAI:DOC",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/rdai-doc.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xc9fE8E7A47EFf9f62f2684a540619D52FBcD6649",
+      "name": "RSK Swap LP rDAI/RBTC",
+      "symbol": "🦄rDAI:RBTC",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/rdai-rbtc.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x2D5146C744Bef25B27d0DC8523Ed547BF7514D84",
+      "name": "RSK Swap LP RIF/rDAI",
+      "symbol": "🦄RIF:rDAI",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/rif-rdai.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x73C08467E23F7DcB7DdbBc8d05041b74467A498A",
+      "name": "Flixxo on RSK",
+      "symbol": "rFLIXX",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/flixx.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x14ADAE34beF7Ca957ce2DDe5AdD97EA050123827",
+      "name": "ChainLink Token on RSK",
+      "symbol": "rLINK",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/link.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x1BDa44fda023F2af8280a16FD1b01D1A493BA6c4",
+      "name": "USD Coin on RSK",
+      "symbol": "rUSDC",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/usdc.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xEf213441a85DF4d7acBdAe0Cf78004E1e486BB96",
+      "name": "Tether USD on RSK",
+      "symbol": "rUSDT",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/usdt.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x9C3a5F8d686fadE293c0Ce989A62a34408C4e307",
+      "name": "RedFOX Labs on RSK",
+      "symbol": "rRFOX",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/rfox.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xD256C121A507cadd2687599E27fA45E31B7c3199",
+      "name": "rLending USDT",
+      "symbol": "crUSDT",
+      "decimals": 8,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/crusdt.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xB7Ff2c56c897562c0AA6747D2679d35F5e937492",
+      "name": "rLending RIF",
+      "symbol": "cRIF",
+      "decimals": 8,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/crif.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x872664A885A1995D754E3666A23FaD5c801401C4",
+      "name": "rLending RBTC",
+      "symbol": "cRBTC",
+      "decimals": 8,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/crbtc.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x4991516DF6053121121274397A8C1DAD608bc95B",
+      "name": "Bundles Finance on RSK",
+      "symbol": "rBUND",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/bund.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xFF9EA341d9ea91CB7c54342354377f5104Fd403f",
+      "name": "AMLT Coinfirm on RSK",
+      "symbol": "rAMLT",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/amlt.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xEfC78FC7D48B64958315949279bA181C2114abbD",
+      "name": "Sovryn Token",
+      "symbol": "SOV",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/sov.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x9aC7Fe28967b30e3a4E6E03286D715B42B453d10",
+      "name": "Money on Chain Governance Token",
+      "symbol": "MOC",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/moc.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x70566D8541beaBe984c8BAbF8A816Ed908514Ba8",
+      "name": "Universal Basic Income on RSK",
+      "symbol": "rUBI",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/ubi.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xd52da63689543924dcA66bCBe2e2Ea599c45d575",
+      "name": "Pesos Argentinos PagoLinea",
+      "symbol": "ARSCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/arscb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xaA5dc2Ea0E056Fc962F48aB25547d66d3586eE8a",
+      "name": "Dólar Americano PagoLinea",
+      "symbol": "USDCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/usdcb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xE9F78E507F24537f3f78c212Cf93F65eEC9054C2",
+      "name": "Bolívares PagoLinea",
+      "symbol": "VESCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/vescb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x7C459C5B11E2815DB085DDA9EC314a9cDe00a082",
+      "name": "Pesos Colombianos PagoLinea",
+      "symbol": "COPCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/copcb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x3e040020648A2f2c872ce0c7165ba5aD7841c972",
+      "name": "Real Brasileño PagoLinea",
+      "symbol": "BRLCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/brlcb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xae2CEB4B57AdE22643BE2909425105d5114b1DbC",
+      "name": "Euro PagoLinea",
+      "symbol": "EURCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/eurcb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x99AF5DeB8dAebcD36FCCd16fa46dC95D922cDe5b",
+      "name": "Pesos Panameños PagoLinea",
+      "symbol": "PABCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/pabcb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xA05Fd8082e19923aa4868ff3C2aE48850B734736",
+      "name": "Guaranies Paraguayos PagoLinea",
+      "symbol": "PYGCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/pygcb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x0f6895FA2679453d2c32C5f6E2f00e4621c57Ca2",
+      "name": "Sol Peruano PagoLinea",
+      "symbol": "PENCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/pencb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x61B50d8fB43Cc28b56EE7f9DA32aE46c3c1C68A3",
+      "name": "Yuan Chino PagoLinea",
+      "symbol": "CNYCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/cnycb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x2058BA9577C4F90246bEa9D74Ae2e4Cd0167A123",
+      "name": "Pesos Mexicanos PagoLinea",
+      "symbol": "MXNCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/mxncb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x977675B863b3b1Cf46A927fdDcbe0c831bF50135",
+      "name": "Pesos Bolivianos PagoLinea",
+      "symbol": "BOBCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/bobcb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x3d9f9e1f8151410BEdA306fDF8626a02e03ea8aa",
+      "name": "Rupia Indonesia PagoLinea",
+      "symbol": "IDRCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/idrcb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xd8132625b10B3962239F6842981dCE02f1a163D2",
+      "name": "Peso Uruguayo PagoLinea",
+      "symbol": "UYUCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/uyucb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xAb2d290b7a600f5eA8d5B933f6F15c867Fd7e60e",
+      "name": "Bitcoin PagoLinea",
+      "symbol": "BTCCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/btccb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x84C0Cb1D6623cfB3546a79c66eB96b874CE6659d",
+      "name": "Ether PagoLinea",
+      "symbol": "ETHCB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/ethcb.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xE355C280131dfaf18Bf1C3648aEE3c396Db6B5Fd",
+      "name": "Brazilian Digital Token",
+      "symbol": "BRZ",
+      "decimals": 4,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/brz.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0xb5999795BE0eBb5BAb23144Aa5fD6a02d080299f",
+      "name": "XUSD Babelfish stablecoin",
+      "symbol": "XUSD",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/xusd.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x055a902303746382Fbb7D18f6aE0df56EFDC5213",
+      "name": "Babelfish",
+      "symbol": "FISH",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/rsk/fish.png"
+    },
+    {
+      "chainId": 30,
+      "address": "0x542fda317318ebf1d3deaf76e0b632741a7e677d",
+      "name": "Rootstock RSK",
+      "symbol": "RBTC",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/5070/thumb/rsk-logo.jpg?1547040475"
+    }
+  ],
+  "version": {
+    "major": 0,
+    "minor": 1,
+    "patch": 0
+  }
+}

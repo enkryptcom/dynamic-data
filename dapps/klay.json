@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Iskra",
+    "link": "https://iskra.world/",
+    "description": "Iskra offers a premier destination for players, developers and investors to explore the thrill and opportunity of Web3 gaming alongside a vibrant community.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/iskra.png"
+  },
+  {
+    "title": "DeFi Kingdoms",
+    "link": "https://defikingdoms.com/",
+    "description": "A cross-chain fantasy RPG game with beautiful pixel art, tokenized resources, and Hero NFTs integrated with DeFi protocols.",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/defikingdoms.png"
+  },
+  {
+    "title": "The Challenge",
+    "description": "The challenge app challenges you to be more active and earn rewards from walking.",
+    "link": "https://challenge.zikto.com/",
+    "isFavorites": false,
+    "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/main/assets/icons/thechallenge.webp"
+  }
+]

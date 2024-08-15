@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Forma Explorer",
+    "link": "https://explorer.forma.art/",
+    "description": "The official Forma block explorer.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/FfK0JSps/image-1442.png"
+  },
+  {
+    "title": "Modularium",
+    "link": "https://modularium.art/",
+    "description": "Modularium is the go-to NFT Marketplace built on Forma chain.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/YGGgdwT5/image-1443.png"
+  },
+  {
+    "title": "relay.link",
+    "link": "https://relay.link/forma",
+    "description": "A DEX and bridge built on Forma.",
+    "isFavorites": true,
+    "image": "https://i.postimg.cc/McrV0G30/image-1444.png"
+  },
+  {
+    "title": "Apello",
+    "link": "https://www.apello.xyz/",
+    "description": "The premiere toolkit for NFT communities built on Forma.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/HrzQxzQh/image-1445.png"
+  }
+]
