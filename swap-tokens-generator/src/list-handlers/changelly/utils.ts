@@ -26,7 +26,7 @@ const ChangellyPlatforms: {
   [NetworkName.Optimism]: "optimism",
   [NetworkName.Moonbeam]: "glmr",
   [NetworkName.Base]: "BASE",
-  [NetworkName.Rootstock]: "RBTC",
+  [NetworkName.Rootstock]: "rootstock",
 };
 
 const ChangellyContractMap: {
@@ -96,7 +96,16 @@ const NativeTokens: Record<string, Token> = {
     type: NetworkType.Bitcoin,
     cgId: "dogecoin",
   },
-  // TODO: add RBTC?
+  rbtc: {
+    address: NATIVE_ADDRESS,
+    decimals: 18,
+    logoURI:
+      "https://assets.coingecko.com/coins/images/5070/thumb/rsk-logo.jpg?",
+    name: "Rootstock RSK",
+    symbol: "RBTC",
+    type: NetworkType.EVM,
+    cgId: "rootstock",
+  },
 };
 
 export { ChangellyContractMap, ChangellyPlatforms, NativeTokens };

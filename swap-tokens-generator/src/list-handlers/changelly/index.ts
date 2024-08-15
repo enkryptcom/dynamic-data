@@ -43,7 +43,7 @@ interface ChangellyCurrency {
 export const formatChangellyCurrencies = (
   currencies: ChangellyCurrency[],
   tokensArr: Token[],
-  network: NetworkName
+  network: NetworkName,
 ): ChangellyCurrency[] => {
   // Changelly must support cross-chain swaps on this network
   if (!ChangellyPlatforms[network]) return currencies;
@@ -109,7 +109,7 @@ export default async (): Promise<ChangellyCurrency[]> =>
 
       // Only keep tokens that can be swapped in both directions
       const filtered = json.result.filter(
-        (cur) => cur.enabled && cur.enabledFrom && cur.enabledTo
+        (cur) => cur.enabled && cur.enabledFrom && cur.enabledTo,
       );
 
       // Override info of native currencies with our hard coded info
