@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Town Story",
+    "link": "https://townstory.io/",
+    "description": "Create your own metaverse story here in the world of Town Story!",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/1nztBxYp/image-1446.png"
+  },
+  {
+    "title": "Full Count",
+    "link": "https://fullcount.xyz/",
+    "description": "Fullcount is a baseball strategy game. One player plays as a pitcher and the other as a batter, and they face each other down in a single at bat.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/XGDvD2Tt/image-1448.png"
+  },
+  {
+    "title": "Damned Pirates Society",
+    "link": "https://damnedpiratessociety.io/",
+    "description": "Sail the seas in search of Doubloons and NFT artifacts.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/R34q3J7p/image-1447.png"
+  },
+  {
+    "title": "Pirate Nation",
+    "link": "https://piratenation.game/",
+    "description": "A fully onchain RPG, filled with high seas adventure, treasure, & unexpected surprises!",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/NKhKcz5c/image-1449.png"
+  }
+]
