@@ -1,0 +1,16 @@
+[
+  {
+    "title": "relay.link",
+    "link": "https://relay.link/bridge/apex?fromChainId=1/",
+    "description": "Bridge directly to the Proof of Play ecosystem.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/L6N9Qbyg/image-1474.png"
+  },
+  {
+    "title": "Pirate Nation",
+    "link": "https://piratenation.game/",
+    "description": "Build your ship, recruit your crew, and battle your way across the isles to become the top pirate!",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/mgnbBFWb/image-1473.png"
+  }
+]
