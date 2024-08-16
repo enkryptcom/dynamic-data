@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Icecream Swap",
+    "link": "https://icecreamswap.com/swap",
+    "description": "A DEX built on Rari chain.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/Y0JQgCJY/Group-1476.png"
+  },
+  {
+    "title": "Rarible",
+    "link": "https://rarible.com/",
+    "description": "NFT marketplace with native Rari support.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/m2HY47Hw/image-1480.png"
+  },
+  {
+    "title": "Stargate Finance",
+    "link": "https://stargate.finance/",
+    "description": "Stargate is a fully composable liquidity transport protocol that lives at the heart of omnichain DeFi.",
+    "isFavorites": true,
+    "image": "https://i.postimg.cc/tRf38BYJ/image-1482.png"
+  },
+  {
+    "title": "BlockScout",
+    "description": "Keep track of your transactions on Rari chain.",
+    "link": "https://www.blockscout.com/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/y8CF8Whz/image-1479.png"
+  }
+]
