@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Mode Bridge",
+    "link": "https://app.mode.network/",
+    "description": "The official bridge to Mode Network.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/d3f4xnrP/image-1461.png"
+  },
+  {
+    "title": "Element",
+    "link": "https://element.market/mode",
+    "description": "Native NFT marketplace on Mode Network.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/442Ly4ML/image-1462.png"
+  },
+  {
+    "title": "BetMode",
+    "link": "https://play.betmode.io/"
+    "description": "The ultimate onchain betting platform.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/prrsC39J/image-1463.png"
+  },
+  {
+    "title": "Astaria",
+    "description": "Astaria is an oracle-less, intent-based, fixed-rate lending protocol supporting unlimited loan durations for any asset.",
+    "link": "https://astaria.xyz/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/HxBSQTLL/image-1464.png"
+  }
+]
