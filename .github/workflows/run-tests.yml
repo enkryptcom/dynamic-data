@@ -1,8 +1,10 @@
-name: Update swap lists every 60 mins
+# (does the same thing as update-swap-lists but doesn't commit changes)
+
+name: Run tests
 
 on:
   push:
-    branches:
+    branches-ignore:
       - main
   schedule:
     - cron: "0 * * * *"
@@ -20,8 +22,3 @@ jobs:
       - run: cd swap-tokens-generator && yarn install --frozen-lockfile && yarn run build
       - run: cd swap-tokens-generator && yarn run update:lists
       - run: cd swap-tokens-generator && mv dist/lists/*.json ../swaplists
-      - uses: EndBug/add-and-commit@v9
-        with:
-          default_author: github_actions
-          message: "swap list updated"
-          add: "swaplists/*.json"

@@ -1,3 +1,6 @@
+/**
+ * Must match network names in Enkrypt because used in .json filenames
+ */
 export enum NetworkName {
   Ethereum = "ETH",
   EthereumClassic = "ETC",
@@ -16,6 +19,8 @@ export enum NetworkName {
   MaticZK = "MATICZK",
   Solana = "SOLANA",
   Rootstock = "Rootstock",
+  Telos = "TLOS",
+  Blast = "blast",
 }
 
 export enum NetworkType {
