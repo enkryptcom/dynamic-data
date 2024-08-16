@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Symbiosis",
+    "link": "https://app.symbiosis.finance/swap?chainIn=Ethereum&chainOut=Scroll&tokenIn=ETH&tokenOut=ETH",
+    "description": "Bridge to the Scroll ecosystem.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/J7T7PFYD/image-1475.png"
+  },
+  {
+    "title": "Pencils Protocol",
+    "link": "https://pencilsprotocol.io/",
+    "description": "Pencils Protocol offers auction services for blockchain native assets and RWAs, along with unified and leveraged yield aggregation services.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/Bbwqb8Pc/image-1476.png"
+  },
+  {
+    "title": "Tokan Exchange",
+    "link": "https://tokan.exchange/",
+    "description": "Tokan serves as a vital liquidity and exchange layer for the Scroll L2.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/nrLFnKrh/image-1477.png"
+  },
+  {
+    "title": "Rho Markets",
+    "description": "Liquidity Layer, lending & yielding on Scroll L2.",
+    "link": "https://www.rhomarkets.xyz/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/Jnx7wY1F/image-1478.png"
+  }
+]
