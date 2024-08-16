@@ -1,0 +1,30 @@
+[
+  {
+    "title": "BinarySwap",
+    "link": "https://www.binaryswap.io/#/swap",
+    "description": "Decentralized exchange and yield farm on OpBNB network.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/jd3gFqt0/image-1468.png"
+  },
+  {
+    "title": "Kinza Finance",
+    "link": "https://kinza.finance/",
+    "description": "Kinza focuses on being the best on-chain money market.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/9MB1tCJk/image-1467.png"
+  },
+  {
+    "title": "Friend3",
+    "link": "https://friend3.group/",
+    "description": "A social dApp that offers customizable pricing for your groups.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/N0mdF1TB/image-1466.png"
+  },
+  {
+    "title": "White Protocol",
+    "description": "The Aave Protocol is decentralised non-custodial liquidity protocol where users can participate as suppliers, borrowers or liquidators.",
+    "link": "https://white-protocol.com/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/qqMw1SFv/image-1465.png"
+  }
+]
