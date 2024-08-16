@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Palm Bridge",
+    "link": "https://app.palm.io/bridge",
+    "description": "Official Palm bridge.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/gJDb7wYq/image-1469.png"
+  },
+  {
+    "title": "Artists Valley",
+    "link": "https://artists-valley.com/",
+    "description": "A decentralized and multichain hangout hub for artists.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/gcgPq6tG/image-1470.png"
+  },
+  {
+    "title": "Candy",
+    "link": "https://www.candy.com/",
+    "description": "Candy Digital offers unique digital collectibles for the world's largest fan communities.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/T3zx5M7m/image-1472.png"
+  },
+  {
+    "title": "NFT Trade",
+    "description": "Create, buy, sell, swap and earn NFTs.",
+    "link": "https://nftrade.com/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/VvkPPYvy/image-1471.png"
+  }
+]
