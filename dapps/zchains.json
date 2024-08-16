@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Zwap Bridge",
+    "link": "https://swap.zchains.com/bridge?chain=zchain",
+    "description": "The official bridge to Zchain.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/jSsfPPGR/image-1456.png"
+  },
+  {
+    "title": "Zwap Swap",
+    "link": "https://swap.zchains.com/",
+    "description": "Designed to simplify the DeFi experience, Zwap ensures smooth and seamless transactions on Zchain.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/jSsfPPGR/image-1456.png"
+  }
+]
