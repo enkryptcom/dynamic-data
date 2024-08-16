@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Orbiter Bridge",
+    "link": "https://www.orbiter.finance/?source=Ethereum&dest=Manta&token=ETH",
+    "description": "Bridge assets directly to Manta.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/52N31h95/image-1460.png"
+  },
+  {
+    "title": "Manta DEX",
+    "link": "https://mantadex.com/swap",
+    "description": "Native DEX built on Manta Network.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/fTvKGzsT/image-1459.png"
+  },
+  {
+    "title": "Bingo0x",
+    "link": "https://app.bingo0x.com/",
+    "description": "A casual web3 competition platform to win stablecoins and more.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/65Kcb7Dm/Group-1477.png"
+  },
+  {
+    "title": "JumboShrimps",
+    "description": "Revolutionary staking protocol on Manta. Stake for a chance to win!",
+    "link": "https://app.jumboshrimps.xyz/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/527mtsjh/image-1457.png"
+  }
+]
