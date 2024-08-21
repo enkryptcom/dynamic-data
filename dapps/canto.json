@@ -1,28 +1,28 @@
 [
   {
     "title": "Canto Bridge",
-    "link": "https://bridge.canto.io/",
-    "description": "The Canto Bridge allows you to bridge assets to Canto from Ethereum or Cosmos Hub.",
+    "link": "https://app.canto.io/bridge",
+    "description": "The Canto Bridge allows you to bridge assets to Canto from Ethereum or Cosmos Hub ecosystems.",
     "isFavorites": false,
     "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/c9fa0efb4c3bf3ef74d5ffcf1df639a14dfff1f4/assets/canto/canto.svg"
   },
   {
     "title": "Canto Staking",
-    "link": "https://staking.canto.io/",
+    "link": "https://app.canto.io/staking",
     "description": "Staking, also known as delegating, is the process of locking up your $CANTO tokens for a period of time to contribute to the security of the Canto network.",
     "isFavorites": false,
     "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/c9fa0efb4c3bf3ef74d5ffcf1df639a14dfff1f4/assets/canto/canto.svg"
   },
   {
     "title": "Canto Lending",
-    "link": "https://lending.canto.io/",
+    "link": "https://app.canto.io/lending",
     "description": "The Canto Lending Market allows you to supply and borrow assets, including LP tokens received from the Canto LP Interface.",
     "isFavorites": false,
     "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/c9fa0efb4c3bf3ef74d5ffcf1df639a14dfff1f4/assets/canto/canto.svg"
   },
   {
     "title": "Canto Governance",
-    "link": "https://governance.canto.io/",
+    "link": "https://app.canto.io/governance",
     "description": "The Canto governance page is a place where all users who have staked Canto can vote on proposals.",
     "isFavorites": false,
     "image": "https://raw.githubusercontent.com/enkryptcom/dynamic-data/c9fa0efb4c3bf3ef74d5ffcf1df639a14dfff1f4/assets/canto/canto.svg"
