@@ -24,17 +24,18 @@ const runner = async () => {
   // For example, on Ethereum, ETH is given address 0xee..ee
 
   /** network name -> token address -> token info */
-  const coingeckoTokens: Record<string, Record<string, Token>> = {};
+  const coingeckoTokens: Record<string, Record<Lowercase<string>, Token>> = {};
   /** network name -> token address -> token info */
-  const oneInchTokens: Record<string, Record<string, Token>> = {};
+  const oneInchTokens: Record<string, Record<Lowercase<string>, Token>> = {};
   /** network name -> token address -> token info */
-  const paraswapTokens: Record<string, Record<string, Token>> = {};
+  const paraswapTokens: Record<string, Record<Lowercase<string>, Token>> = {};
   /** network name (only Solana) -> token address -> token info */
-  const jupiterTokens: Record<string, Record<string, Token>> = {};
+  const jupiterTokens: Record<string, Record<Lowercase<string>, Token>> = {};
 
   // Load CoinGecko tokens for each chain
   console.info(`Fetching CoinGecko tokens  networks=${cgSupportedChains.length}`)
   const allChains = Object.values(NetworkName);
+
   for (let i = 0, len = cgSupportedChains.length; i < len; i++) {
     const chain = cgSupportedChains[i]
     console.info(`Fetching CoinGecko tokens  ${i + 1}/${len}  chain=${chain}`)
@@ -59,9 +60,6 @@ const runner = async () => {
     })
   );
 
-  // Load Jupiter tokens
-  jupiterTokens[NetworkName.Solana] = await requestJupiter()
-
   console.info("Fetching top CoinGecko tokens")
   /** Top tokens fetched from CoinGecko */
   const topTokenInfo = await getCoinGeckoTopTokenInfo();
@@ -69,6 +67,10 @@ const runner = async () => {
   console.info("Fetching Changelly tokens")
   /** All tokens fetched from Changelly */
   let changellyTokens = await changelly();
+
+  // Load Jupiter tokens
+  console.info(`Fetching Jupiter tokens`)
+  jupiterTokens[NetworkName.Solana] = await requestJupiter()
 
   console.info("Fetching ParaSwap Pricefeed")
   /** Token prices fetched from Paraswap */
@@ -104,15 +106,17 @@ const runner = async () => {
      *  - price
      *  - rank
      */
-    const addTokensIfNotAdded = (items: Record<string, Token>) => {
-      const addresses = Object.keys(items);
+    const addTokensIfNotAdded = (items: Record<Lowercase<string>, Token>) => {
+      const addresses = Object.keys(items) as Lowercase<string>[];
 
       addresses.forEach((address) => {
         // Already procesed this token in this network
         if (includedTokens.has(address)) return;
 
+        /** CoinGecko unique coin (currency/token) id */
         const cgId = topTokenInfo.contractsToId[address] as string;
-        // Initialise as ParaSwap price
+
+        // Initialise to ParaSwap price, if found
         let price =
           prices[chain] && prices[chain][address]
             ? prices[chain][address]
@@ -134,6 +138,10 @@ const runner = async () => {
           name: items[address].name,
           symbol: items[address].symbol,
           type: items[address].type,
+          // Filled in below (where found)
+          rank: undefined,
+          cgId: undefined,
+          price: undefined,
         };
 
         // Attach pricing
@@ -200,6 +208,7 @@ const runner = async () => {
     )
     // For any tokens we couldn't find prices for, get their prices from EthVM instead
     getPriceByIDs(priceMissingIds).then((missingPrices) => {
+      // TODO: do prices need to be lowercase?
       ethvmPrices = { ...missingPrices, ...ethvmPrices };
       const filename = join('dist', 'lists', `${chain}.json`)
       console.info(
@@ -209,26 +218,25 @@ const runner = async () => {
         + `  all=${tokens.length}`
         + `  trending=${trendingTokens.length}`
         + `  top=${topTokens.length}`
+        + `  missingPricesFound=${Object.values(missingPrices).filter(p => p != null).length}`
       )
-      writeFileSync(
-        filename,
-        JSON.stringify({
-          all: tokens.map((t) => {
-            if (!t.price && t.cgId) t.price = missingPrices[t.cgId];
-            return t;
-          }),
-          trending: trendingTokens.map((t) => {
-            if (!t.token.price && t.token.cgId)
-              t.token.price = missingPrices[t.token.cgId];
-            return t.token;
-          }),
-          top: topTokens.map((t) => {
-            if (!t.token.price && t.token.cgId)
-              t.token.price = missingPrices[t.token.cgId];
-            return t.token;
-          }),
-        })
-      );
+      const content = {
+        all: tokens.map((t) => {
+          if (!t.price && t.cgId) t.price = missingPrices[t.cgId];
+          return t;
+        }),
+        trending: trendingTokens.map((t) => {
+          if (!t.token.price && t.token.cgId)
+            t.token.price = missingPrices[t.token.cgId];
+          return t.token;
+        }),
+        top: topTokens.map((t) => {
+          if (!t.token.price && t.token.cgId)
+            t.token.price = missingPrices[t.token.cgId];
+          return t.token;
+        }),
+      }
+      writeFileSync(filename, JSON.stringify(content));
     });
   });
   changellyTokens.forEach((t) => {

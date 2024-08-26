@@ -1,11 +1,10 @@
 import { CHAIN_CONFIGS, NATIVE_ADDRESS } from "@src/configs";
 import { NetworkName, Token } from "@src/types";
-import fetch from "node-fetch";
 
 const CG_BASE = `https://tokens.coingecko.com/`;
 const CG_API_BASE = `https://partners.mewapi.io/coingecko/api/v3/`;
 
-const excludedAddresses = ["0x0000000000000000000000000000000000001010"];
+const excludedAddresses: Lowercase<string>[] = ["0x0000000000000000000000000000000000001010"];
 const cgPlatform: Record<NetworkName, string> = {
   [NetworkName.Ethereum]: "ethereum",
   [NetworkName.Matic]: "polygon-pos",
@@ -101,8 +100,18 @@ export const getTopTokenIds = async (): Promise<
       return resp;
     });
 
+/**
+ * Get tokens from CoinGecko with their CoinGecko ID's and platforms
+ * that they're available on
+ *
+ * Note: CoinGecko cases base58 addresses (eg Solana) but does not case
+ * EVM addresses. We lowercase all addresses to make comparisons easier.
+ * We don't expect address any collisions.
+ *
+ * @returns mapping of lowercase address (any platform) -> CoinGecko id
+ */
 export const getContractAddressesToCG = async (): Promise<
-  Record<string, string>
+  Record<Lowercase<string>, string>
 > =>
   fetch(`${CG_API_BASE}coins/list?include_platform=true`)
     .then((res) => res.json())
@@ -111,33 +120,39 @@ export const getContractAddressesToCG = async (): Promise<
         id: string;
         platforms: Record<string, string>;
       }[];
-      const resp: Record<string, string> = {};
+
+      // Unroll the response into our mapping
+      const resp: Record<Lowercase<string>, string> = {};
+
+      // Extract the map
       json.forEach((coin) => {
         const addresses = Object.values(coin.platforms);
         addresses.forEach((addr) => {
-          resp[addr] = coin.id;
+          resp[addr.toLowerCase() as Lowercase<string>] = coin.id;
         });
       });
+
       return resp;
     });
-export const getCoinGeckoTopTokenInfo = async () => {
-  const promises = [
+
+export const getCoinGeckoTopTokenInfo = async (): Promise<{
+  trendingTokens: Record<string, number>,
+  topTokens: Record<string, { rank: number; price: number; }>,
+  /** Mapping of lowercase address (on any platform) -> CoinGecko id */
+  contractsToId: Record<Lowercase<string>, string>,
+}> => {
+  const [trendingTokens, topTokens, contractAddressMap] = await Promise.all([
     getTrendingTokenId(),
     getTopTokenIds(),
     getContractAddressesToCG(),
-  ];
-  return Promise.all(promises).then((result) => ({
-    trendingTokens: result[0] as Record<string, number>,
-    topTokens: result[1] as Record<
-      string,
-      {
-        rank: number;
-        price: number;
-      }
-    >,
-    contractsToId: result[2] as Record<string, string>,
-  }));
+  ]);
+  return {
+    trendingTokens: trendingTokens,
+    topTokens: topTokens,
+    contractsToId: contractAddressMap,
+  }
 };
+
 export default async (chainName: NetworkName): Promise<Record<string, Token>> =>
   fetch(`${CG_BASE}${cgPlatform[chainName]}/all.json`)
     .then((res) => res.json())
@@ -145,10 +160,13 @@ export default async (chainName: NetworkName): Promise<Record<string, Token>> =>
       const json = _json as {
         tokens: Token[];
       };
-      const resp: Record<string, Token> = {};
+      const resp: Record<Lowercase<string>, Token> = {};
       json.tokens.forEach((token) => {
-        if (excludedAddresses.includes(token.address.toLowerCase())) return;
-        resp[token.address.toLowerCase()] = {
+        if (excludedAddresses.includes(token.address.toLowerCase() as Lowercase<string>)) return;
+        // Lowercase the address for matching
+        resp[token.address.toLowerCase() as Lowercase<string>] = {
+          // Maintain casing of the address so because some networks the
+          // address is case sensitive (eg networks that use base58)
           ...token,
           type: CHAIN_CONFIGS[chainName].type,
         };

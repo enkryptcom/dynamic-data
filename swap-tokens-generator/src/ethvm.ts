@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 const ETHVM_BASE = `https://api-v3.ethvm.dev/`;
 
 const ethvmPost = (requestData: string): Promise<any> =>

@@ -17,8 +17,7 @@
     "node": ">=20.16.0"
   },
   "dependencies": {
-    "ethereumjs-util": "^7.1.4",
-    "node-fetch": "^2.7.0"
+    "ethereumjs-util": "^7.1.4"
   },
   "devDependencies": {
     "@swc/core": "^1.7.11",

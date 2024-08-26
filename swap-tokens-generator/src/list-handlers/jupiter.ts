@@ -1,11 +1,10 @@
 import { NetworkName, NetworkType, Token } from "@src/types";
-import fetch from "node-fetch";
 
 // Jupiter is a DEX on Solana
 // @see App: https://jup.ag/
 // @see Documentation: https://station.jup.ag/docs/
 
-const JUPITER_BASE = `https://tokens.jup.ag/tokens?tags=verified`
+const JUPITER_BASE = `https://tokens.jup.ag/`
 
 type JupiterToken = {
   /** @example "AVWsE5PJv3oZPzmurvD6cSwvS1x7bPhj1nFz2LMHFxoK" */
@@ -40,18 +39,63 @@ export const supportedChains: NetworkName[] = [
  * ```
  */
 async function requestJupiter(): Promise<Record<string, Token>> {
-  const res = await fetch(`${JUPITER_BASE}tokens?tags=verified`)
-  const jupiterTokens = await res.json() as JupiterToken[];
+  let jupiterTokens: undefined | JupiterToken[];
+  let attempt = 0
+  const backoff = [0, 500, 1000, 2000, 4000, 8000] // 0 + 500ms + 1_000ms + 2_000ms + 4_000ms + 8_000ms = 15_500ms
+  let errRef: undefined | { err: Error }
+  while (!jupiterTokens) {
+    try {
+      // Exceeded retries
+      if (attempt >= backoff.length) {
+        throw new Error(`Failed to get Jupiter tokens, exceeded max retry attempts ${attempt}/${backoff.length}. Last error: ${String(errRef?.err ?? '???')}`)
+      }
+
+      // Wait before retrying
+      if (backoff[attempt]) {
+        console.info(`Waiting ${backoff[attempt]}ms before retrying request for Jupiter tokens`)
+        await new Promise((res) => setTimeout(res, backoff[attempt]))
+      }
+
+      // Send HTTP request for jupiter tokens
+      const res = await fetch(`${JUPITER_BASE}tokens?tags=verified`, {
+        signal: AbortSignal.timeout(30_000),
+      })
+
+      // Response has fail status?
+      if (!res.ok) {
+        let msg = await res.text().catch((err) => `! Failed to decode response text: ${String(err)}`)
+        const len = msg.length
+        if (len > 512 + 10 + len.toString().length) msg = `${msg.slice(0, 512)}... (512/${len})`
+        throw new Error(`HTTP request to get Jupiter tokens failed with ${res.status} ${res.statusText}: ${msg}`)
+      }
+
+      // Parse result
+      jupiterTokens = await res.json() as JupiterToken[];
+
+      // Santiy check
+      if (!jupiterTokens) {
+        throw new Error(`Failed to get Jupiter tokens, response was empty`)
+      }
+    } catch (err) {
+      console.error(`Error requesting jupiter tokens: ${String(err)}`)
+      errRef = { err: err as Error }
+    }
+    attempt += 1
+  }
 
   /** Mapping of token address (on solana) -> token */
-  const dict: Record<string, Token> = {}
+  const dict: Record<Lowercase<string>, Token> = {}
   for (const jupiterToken of jupiterTokens) {
-    dict[jupiterToken.address] = {
+    // Solana addresses are base58 so they're case sensitive but we'll use
+    // them as dictionary keys anyway because collisions should be extremely
+    // rare
+    // Alternatively, the actual address stored on the token must be cased
+    dict[jupiterToken.address.toLowerCase() as Lowercase<string>] = {
       address: jupiterToken.address,
       symbol: jupiterToken.symbol,
       decimals: jupiterToken.decimals,
       name: jupiterToken.name,
-      logoURI: jupiterToken.logoURI,
+      logoURI: jupiterToken.logoURI ?? '', // TODO: What do I do if logoURI is not defined?
       type: NetworkType.Solana,
       rank: undefined,
       cgId: undefined,
