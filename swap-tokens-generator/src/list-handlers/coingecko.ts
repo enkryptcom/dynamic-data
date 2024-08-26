@@ -1,6 +1,5 @@
 import { CHAIN_CONFIGS, NATIVE_ADDRESS } from "@src/configs";
 import { NetworkName, Token } from "@src/types";
-import fetch from "node-fetch";
 
 const CG_BASE = `https://tokens.coingecko.com/`;
 const CG_API_BASE = `https://partners.mewapi.io/coingecko/api/v3/`;

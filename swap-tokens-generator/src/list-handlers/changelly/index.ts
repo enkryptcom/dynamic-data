@@ -1,6 +1,5 @@
 import { NATIVE_ADDRESS } from "@src/configs";
 import { NetworkName, Token } from "@src/types";
-import fetch from "node-fetch";
 import {
   ChangellyContractMap,
   ChangellyPlatforms,

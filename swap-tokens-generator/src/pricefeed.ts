@@ -1,6 +1,5 @@
 import { CHAIN_CONFIGS } from "@src/configs";
 import { NetworkName } from "@src/types";
-import fetch from "node-fetch";
 
 const PARASWAP_BASE = `https://api.paraswap.io/`;
 

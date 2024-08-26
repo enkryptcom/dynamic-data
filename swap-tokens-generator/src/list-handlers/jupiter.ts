@@ -1,5 +1,4 @@
 import { NetworkName, NetworkType, Token } from "@src/types";
-import fetch from "node-fetch";
 
 // Jupiter is a DEX on Solana
 // @see App: https://jup.ag/
