@@ -12,7 +12,14 @@
     "outDir": "dist",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "declaration": true
+    "declaration": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "skipLibCheck": true,
   },
   "include": ["src/**/*.ts", "tests/**/*.ts"],
   "exclude": [
