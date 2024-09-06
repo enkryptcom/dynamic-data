@@ -11,7 +11,7 @@ import { NetworkName, NetworkType, Token } from "@src/types";
  *
  * ```sh
  * # To get a list of Changely tokens with their blockchain id's
- * curl https://partners.mewapi.io/changelly-v2 -X POST -H Accept:application/json -H Content-Type:application/json --data '{"id":"1","jsonrpc":"2.0","method":"getCurrenciesFull","params":{}}'
+ * curl -sL https://partners.mewapi.io/changelly-v2 -X POST -H Accept:application/json -H Content-Type:application/json --data '{"id":"1","jsonrpc":"2.0","method":"getCurrenciesFull","params":{}}'
  * ````
  */
 const ChangellyPlatforms: {
@@ -27,10 +27,11 @@ const ChangellyPlatforms: {
   [NetworkName.Moonbeam]: "glmr",
   [NetworkName.Base]: "BASE",
   [NetworkName.Rootstock]: "rootstock",
+  [NetworkName.Solana]: "solana",
 };
 
 const ChangellyContractMap: {
-  [key in NetworkName]?: Record<string, string>;
+  [key in NetworkName]?: Record<string, Lowercase<string>>;
 } = {
   [NetworkName.Avalanche]: {
     gmx: "0x62edc0692bd897d2295872a9ffcac5425011c661",
