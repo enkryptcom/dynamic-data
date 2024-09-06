@@ -10,6 +10,9 @@ import {
 
 const CHANGELLY_BASE = `https://partners.mewapi.io/changelly-v2`;
 
+/**
+ * Results from the `CHANGELLY_BASE` URL https://partners.mewapi.io/changelly-v2
+ */
 interface ChangellyCurrency {
   /** @example "EURT" */
   name: string;
@@ -50,33 +53,31 @@ export const formatChangellyCurrencies = (
   /** Changelly Blockchain ID */
   const cPlatform = ChangellyPlatforms[network];
 
+  /** Hardcoded (on this network) token symbol (/ticker) -> lowercase address */
   const contractMap = ChangellyContractMap[network];
 
-  const tokens: Record<string, Token> = {};
+  /** Lowercase (for joining) address -> token */
+  const tokens: Record<Lowercase<string>, Token> = {};
   tokensArr.forEach((t) => {
-    tokens[t.address] = t;
+    tokens[t.address.toLowerCase() as Lowercase<string>] = t;
   });
 
   // Try to find a token for each currency
   currencies.forEach((cur) => {
     // Drop if we don't support swaps on this network
     if (cur.blockchain !== cPlatform) return;
-    if (
-      contractMap &&
-      contractMap[cur.ticker] &&
-      tokens[contractMap[cur.ticker]]
-    ) {
-      // Join the currency's token by ticker symbol
+    if (contractMap?.[cur.ticker] && tokens[contractMap[cur.ticker]]) {
+      // Hard coded known contract, join the currency's token by ticker symbol
       cur.token = tokens[contractMap[cur.ticker]];
     } else if (!cur.contractAddress) {
       // Currency doesn't have an address, it's the native currency of the chain
       cur.token = tokens[NATIVE_ADDRESS];
     } else if (
       cur.contractAddress &&
-      tokens[cur.contractAddress.toLowerCase()]
+      tokens[cur.contractAddress.toLowerCase() as Lowercase<string>]
     ) {
       // Join the currency's token by it's address
-      cur.token = tokens[cur.contractAddress.toLowerCase()];
+      cur.token = tokens[cur.contractAddress.toLowerCase() as Lowercase<string>];
     }
   });
 
