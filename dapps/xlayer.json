@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Portal",
+    "link": "https://portalbridge.com/",
+    "description": "Bridge to X Layer.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/4KtbQC4X/portal-logo.png"
+  },
+  {
+    "title": "QuickSwap",
+    "link": "https://quickswap.exchange/",
+    "description": "QuickSwap is a permissionless decentralized exchange (DEX) based on X Layer.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/MvPDWbrJ/HMr5kh-OI-400x400.jpg"
+  },
+  {
+    "title": "Renzo",
+    "link": "https://www.renzoprotocol.com/",
+    "description": "Renzo is a Liquid Restaking Token (LRT) and Strategy Manager for X Layer.",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/VJJF5r3r/image-1716108669561-renzo.jpg"
+  },
+  {
+    "title": "Curve",
+    "description": "Creating deep on-chain liquidity using advanced bonding curves.",
+    "link": "https://curve.fi/",
+    "isFavorites": false,
+    "image": "https://i.postimg.cc/VJ2Wts87/crv.jpg"
+  }
+]
