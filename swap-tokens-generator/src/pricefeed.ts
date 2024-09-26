@@ -35,7 +35,7 @@ export default async (): Promise<
         prices.forEach((p) => {
           retResponse[chainName][p.address.toLowerCase()] = p.price;
         });
-      })
+      }),
   );
   return Promise.all(promises).then(() => retResponse);
 };
