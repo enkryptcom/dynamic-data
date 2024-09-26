@@ -9,6 +9,7 @@ import {
 // Changelly is CryptoCurrency exchange that supports cross chain swaps
 
 const CHANGELLY_BASE = `https://partners.mewapi.io/changelly-v2`;
+const TIMEOUT = 30_000
 
 /**
  * Results from the `CHANGELLY_BASE` URL https://partners.mewapi.io/changelly-v2
@@ -38,17 +39,19 @@ interface ChangellyCurrency {
   blockchain: string;
   /** @example "0xC581b735A1688071A1746c968e0798D642EDE491" */
   contractAddress?: string;
-  /** Not given by Changelly API response, filled in later by {@link formatChangellyCurrencies} */
+  /** Not given by Changelly API response, filled in later by {@link hydrateChangellyCurrencies} */
   token?: Token;
 }
 
-export const formatChangellyCurrencies = (
-  currencies: ChangellyCurrency[],
-  tokensArr: Token[],
+export const hydrateChangellyCurrencies = (
+  /** All Changelly currencies, we modify these by joining against `enkryptNetworkTokens` */
+  mutAllChangellyCurrencies: readonly ChangellyCurrency[],
+  /** All Enkrypt tokens on `network` */
+  networkEnkryptTokens: readonly Token[],
   network: NetworkName,
-): ChangellyCurrency[] => {
+): void => {
   // Changelly must support cross-chain swaps on this network
-  if (!ChangellyPlatforms[network]) return currencies;
+  if (!ChangellyPlatforms[network]) return
 
   /** Changelly Blockchain ID */
   const cPlatform = ChangellyPlatforms[network];
@@ -58,12 +61,12 @@ export const formatChangellyCurrencies = (
 
   /** Lowercase (for joining) address -> token */
   const tokens: Record<Lowercase<string>, Token> = {};
-  tokensArr.forEach((t) => {
+  networkEnkryptTokens.forEach((t) => {
     tokens[t.address.toLowerCase() as Lowercase<string>] = t;
   });
 
   // Try to find a token for each currency
-  currencies.forEach((cur) => {
+  mutAllChangellyCurrencies.forEach((cur) => {
     // Drop if we don't support swaps on this network
     if (cur.blockchain !== cPlatform) return;
     if (contractMap?.[cur.ticker] && tokens[contractMap[cur.ticker]]) {
@@ -77,11 +80,10 @@ export const formatChangellyCurrencies = (
       tokens[cur.contractAddress.toLowerCase() as Lowercase<string>]
     ) {
       // Join the currency's token by it's address
-      cur.token = tokens[cur.contractAddress.toLowerCase() as Lowercase<string>];
+      cur.token =
+        tokens[cur.contractAddress.toLowerCase() as Lowercase<string>];
     }
   });
-
-  return currencies;
 };
 
 /**
@@ -89,35 +91,36 @@ export const formatChangellyCurrencies = (
  *
  * Returns tokens sorted by name, ascending
  */
-export default async (): Promise<ChangellyCurrency[]> =>
+export default async function changelly(abortable: Readonly<{ signal: AbortSignal, }>): Promise<ChangellyCurrency[]> {
   // curl https://partners.mewapi.io/changelly-v2 -X POST -H Accept:application/json -H Content-Type:application/json --data '{"id":"1","jsonrpc":"2.0","method":"getCurrenciesFull","params":{}}'
-  fetch(`${CHANGELLY_BASE}`, {
+  const res = await fetch(`${CHANGELLY_BASE}`, {
     method: "POST",
+    signal: AbortSignal.any([AbortSignal.timeout(TIMEOUT), abortable.signal]),
     body: JSON.stringify({
       id: "1",
       jsonrpc: "2.0",
       method: "getCurrenciesFull",
       params: {},
     }),
-    headers: { "Content-Type": "application/json" },
+    headers: [
+      ["Content-Type", "application/json"],
+      ["Accept", "application/json"],
+    ],
   })
-    .then((res) => res.json())
-    .then((_json) => {
-      const json = _json as {
-        result: ChangellyCurrency[];
-      };
 
-      // Only keep tokens that can be swapped in both directions
-      const filtered = json.result.filter(
-        (cur) => cur.enabled && cur.enabledFrom && cur.enabledTo,
-      );
+  const json = await res.json() as { result: ChangellyCurrency[]; }
 
-      // Override info of native currencies with our hard coded info
-      filtered.forEach((item) => {
-        if (NativeTokens[item.ticker]) item.token = NativeTokens[item.ticker];
-      });
+  // Only keep tokens that can be swapped in both directions
+  const filtered = json.result.filter(
+    (cur) => cur.enabled && cur.enabledFrom && cur.enabledTo,
+  );
 
-      // Sort by name, ascending
-      filtered.sort((a, b) => a.fullName.localeCompare(b.fullName));
-      return filtered;
-    });
+  // Override info of native currencies with our hard coded info
+  filtered.forEach((item) => {
+    if (NativeTokens[item.ticker]) item.token = NativeTokens[item.ticker];
+  });
+
+  // Sort by name, ascending
+  filtered.sort((a, b) => a.fullName.localeCompare(b.fullName));
+  return filtered;
+}

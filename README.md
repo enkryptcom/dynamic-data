@@ -42,7 +42,7 @@ These files are used by Enkrypt to help find swappable tokens and provide extra 
 
 ## Requirements
 
-NodeJS `v20.16.0` is required to build and run the code that generates swap lists. If using [`nvm`](https://github.com/nvm-sh/nvm) you can target the version in `./swap-tokens-generateor/.nvmrc`.
+NodeJS `v20.17.0` is required to build and run the code that generates swap lists. If using [`nvm`](https://github.com/nvm-sh/nvm) you can target the version in `./swap-tokens-generateor/.nvmrc`.
 
 Yarn version 1 must be installed globally.
 
@@ -55,7 +55,7 @@ git clone https://github.com/enkryptcom/dynamic-data
 # Move to the codebase directory
 cd swap-tokens-generator
 
-# Make sure NodeJS v20.16.0 is installed and ready
+# Make sure NodeJS v20.17.0 is installed and ready
 
 # If you have nvm installed:
 nvm use

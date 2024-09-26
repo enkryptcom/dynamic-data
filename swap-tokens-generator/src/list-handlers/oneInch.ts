@@ -18,13 +18,14 @@ export const supportedChains: NetworkName[] = [
   NetworkName.Base,
 ];
 
-const requestOneInch = async (
-  chainName: NetworkName
-): Promise<Record<string, Token>> =>
-  fetch(`${ONEINCH_BASE}${CHAIN_CONFIGS[chainName].chainId}/tokens`)
+export async function getOneInchTokens(
+  chainName: NetworkName,
+): Promise<Map<Lowercase<string>, Token>> {
+  return fetch(`${ONEINCH_BASE}${CHAIN_CONFIGS[chainName].chainId}/tokens`)
     .then((res) => res.json())
     .then((_json) => {
-      if (!_json.tokens) return requestOneInch(chainName);
+      // TODO: is this a retry?
+      if (!_json.tokens) return getOneInchTokens(chainName);
       const json = _json as {
         tokens: Record<string, Token>;
       };
@@ -32,7 +33,10 @@ const requestOneInch = async (
       addresses.forEach((addr) => {
         json.tokens[addr].type = CHAIN_CONFIGS[chainName].type;
       });
-      return json.tokens;
+      const map = new Map()
+      for (const [address, token] of Object.entries(json.tokens)) {
+        map.set(address.toLowerCase() as Lowercase<string>, token)
+      }
+      return map
     });
-
-export default requestOneInch;
+}
