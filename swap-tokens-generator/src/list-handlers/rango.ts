@@ -133,12 +133,10 @@ export function mergeRangoEnkryptTokens(
 ): RangoEnkryptToken[] {
   const platform = RangoPlatforms[network]
 
-  // We must support cross-chain swaps on this network with Rango
+  // We must support cross-chain swaps on this network with Rango if we want to hydrate
+  // the Rango tokens with extra info
   if (!platform) {
-    return allRangoTokens.map(rangoToken => ({
-      rangoMeta: rangoToken,
-      token: undefined,
-    }))
+    return []
   }
 
   /** Rango tokens on this network */
