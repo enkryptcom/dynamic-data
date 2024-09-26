@@ -150,8 +150,8 @@ query ($ids: [String!]!) {
     for (let ididx = 0; ididx < chunkSize; ididx++) {
       const cgid = chunk[ididx];
       const current_price =
-        result.data.getCoinGeckoTokenMarketDataByIds[ididx].current_price;
-      if (!(current_price === null || typeof current_price === "number")) {
+        result.data.getCoinGeckoTokenMarketDataByIds[ididx]?.current_price;
+      if (!(current_price == null || typeof current_price === "number")) {
         throw new Error(
           `Failed to fetch CoinGecko price data from EthVM: Unexpected type of current_price` +
           ` ${current_price} for token ${cgid} (${ididx}, ${chunkidx})`,
