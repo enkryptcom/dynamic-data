@@ -198,7 +198,7 @@ const runner = async () => {
         const token: Token = {
           address: rawToken.address,
           decimals: rawToken.decimals,
-          logoURI: rawToken.logoURI,
+          logoURI: rawToken.logoURI == null ? rawToken.logoURI : thumbToLargeIfCoinGeckoLogoURI(rawToken.logoURI),
           name: rawToken.name,
           symbol: rawToken.symbol,
           type: rawToken.type,
@@ -349,5 +349,45 @@ const runner = async () => {
 
   logger.info(`Done`);
 };
+
+/**
+ * CoinGecko gives us small logoURI's
+ *
+ * We prefer larger ones so they render more clearly
+ *
+ * This function checks if it's a coingecko thumbnail (about 25x25) and replaces
+ * it with a coingecko large image (about 255x255)
+ *
+ * As of 2024-10-22 I've tested this on thousands of tokens (all ETH tokens) and they
+ * all appear to have a /large/ equivalent, so we will assume that they all do
+ *
+ * @example
+ *
+ * ```ts
+ * thumbToLargeIfCoinGeckoLogoURI('https://assets.coingecko.com/coins/images/31535/thumb/KB0nEHf__400x400.jpg?1696530344')
+ * // https://assets.coingecko.com/coins/images/31535/large/KB0nEHf__400x400.jpg?1696530344
+ *
+ * thumbToLargeIfCoinGeckoLogoURI('https://assets.coingecko.com/coins/images/36578/thumb/DP.png?1711944185')
+ * // https://assets.coingecko.com/coins/images/36578/large/DP.png?1711944185
+ *
+ * thumbToLargeIfCoinGeckoLogoURI('https://assets.coingecko.com/coins/images/37559/thumb/SLUGLORD_200x200.jpeg?1714871868')
+ * // https://assets.coingecko.com/coins/images/37559/large/SLUGLORD_200x200.jpeg?1714871868
+ *
+ * thumbToLargeIfCoinGeckoLogoURI('https://assets.coingecko.com/coins/images/32906/thumb/1INCH.png?1699804523')
+ * // https://assets.coingecko.com/coins/images/32906/large/1INCH.png?1699804523
+ * ```
+ */
+function thumbToLargeIfCoinGeckoLogoURI(uri: string): string {
+  const thumbi = uri.indexOf("/thumb/");
+  if (!(
+    thumbi !== -1 &&
+    /https:\/\/assets\.coingecko\.com\/coins\/images\/\d+\/thumb\//.test(uri)
+  )) {
+    // Not a CoinGecko token thumbnail URI
+    return uri
+  }
+  const largeUri = uri.slice(0, thumbi) + "/large/" + uri.slice(thumbi + "/thumb/".length);
+  return largeUri
+}
 
 runner();
