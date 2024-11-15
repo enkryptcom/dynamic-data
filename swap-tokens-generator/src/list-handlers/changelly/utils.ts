@@ -10,8 +10,41 @@ import { NetworkName, NetworkType, Token } from "@src/types";
  * final json files outputs.
  *
  * ```sh
- * # To get a list of Changely tokens with their blockchain id's
+ * # List of all Changelly tokens
  * curl -sL https://partners.mewapi.io/changelly-v2 -X POST -H Accept:application/json -H Content-Type:application/json --data '{"id":"1","jsonrpc":"2.0","method":"getCurrenciesFull","params":{}}'
+ *
+ * # List of the most common Changelly token blockchains
+ * curl -sL https://partners.mewapi.io/changelly-v2 -X POST -H Accept:application/json -H Content-Type:application/json --data '{"id":"1","jsonrpc":"2.0","method":"getCurrenciesFull","params":{}}' | jq .result[].blockchain -r | sort | uniq -c | sort -n | tail -n 30
+ * #       1 zcash
+ * #       1 zetachain
+ * #       1 zilliqa
+ * #       1 zklink
+ * #       1 ZKSYNC
+ * #       2 aurora
+ * #       2 cardano
+ * #       2 LINEA
+ * #       2 liquid
+ * #       2 near
+ * #       2 ontology
+ * #       2 polkadot
+ * #       2 ripple
+ * #       2 rootstock
+ * #       2 stellar
+ * #       2 sui
+ * #       2 tezos
+ * #       2 theta
+ * #       3 neo
+ * #       5 optimism
+ * #       6 chiliz
+ * #       8 BASE
+ * #       8 ton
+ * #      10 tron
+ * #      12 avaxc
+ * #      14 polygon
+ * #      15 arbitrum
+ * #      46 solana
+ * #      64 binance_smart_chain
+ * #     307 ethereum
  * ````
  */
 const ChangellyPlatforms: {
