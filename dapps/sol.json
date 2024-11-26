@@ -1,12 +1,5 @@
 [
   {
-    "title": "deBridge",
-    "link": "https://app.debridge.finance/",
-    "description": "Bridge between Solana and popular EVM chains.",
-    "isFavorites": false,
-    "image": "https://i.postimg.cc/SnrnLnQM/image-1393.png"
-  },
-  {
     "title": "Jupiter",
     "link": "https://jup.ag/",
     "description": "The go-to DEX aggregator on Solana.",
