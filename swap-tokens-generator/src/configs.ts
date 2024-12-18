@@ -147,8 +147,8 @@ const CHAIN_CONFIGS: Record<NetworkName, ChainConfig> = {
     decimals: 18,
     logoURI:
       "https://tokens.1inch.io/0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0.png",
-    name: "Polygon Matic",
-    symbol: "MATIC",
+    name: "Ethereum",
+    symbol: "ETH",
   },
   [NetworkName.Solana]: {
     chainId: "900",
