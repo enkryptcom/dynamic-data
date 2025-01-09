@@ -1,0 +1,26 @@
+{
+  "versions": [
+    { 
+      "version": "2.0.3",
+      "description": "We have changed the look of networks menu.",
+      "release_date": "2025-01-16",
+      "release_link":  "https://github.com/enkryptcom/enKrypt/releases/tag/v2.0.3"
+    }, 
+    {
+      "version": "2.0.2",
+      "release_date": "2021-07-01",
+      "release_link":  "https://github.com/enkryptcom/enKrypt/releases/tag/v2.0.2"
+    },
+    { 
+      "version": "2.0.1",
+      "release_date": "2024-12-17",
+      "release_link":  "https://github.com/enkryptcom/enKrypt/releases/tag/v2.0.1"
+    }, 
+    {
+      "version": "2.0.0",
+      "chains_added":  ["fraxtal"],
+      "release_date": "2024-12-13",
+      "release_link":  "https://github.com/enkryptcom/enKrypt/releases/tag/v2.0.0"
+    }
+  ]
+}
