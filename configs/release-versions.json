@@ -1,7 +1,7 @@
 {
   "versions": [
     { 
-      "version": "2.0.3",
+      "version": "2.1.0",
       "description": "A major overhaul of the user experience to better suit degens and new users alike! You can now automatically see every single network we natively support (80+ and counting, jelly MM?). Pin your favorite networks for easy and quick access. Organize them by dragging and dropping. A New section for new networks as we add them. Highlights for new swap providers. Chonky new buttons.",
       "release_date": "2025-01-16",
       "release_link":  "https://github.com/enkryptcom/enKrypt/releases/tag/v2.1.0"
