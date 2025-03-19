@@ -143,7 +143,7 @@ const CHAIN_CONFIGS: Record<NetworkName, ChainConfig> = {
   [NetworkName.MaticZK]: {
     chainId: "1101",
     type: NetworkType.EVM,
-    cgId: "matic-network",
+    cgId: "ethereum",
     decimals: 18,
     logoURI:
       "https://tokens.1inch.io/0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0.png",
