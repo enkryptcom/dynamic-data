@@ -55,7 +55,7 @@ const ChangellyPlatforms: {
   [NetworkName.Binance]: "binance_smart_chain",
   [NetworkName.EthereumClassic]: "ethereum_classic",
   [NetworkName.Avalanche]: "avaxc",
-  [NetworkName.Klaytn]: "klaytn",
+  [NetworkName.Kaia]: "kaia",
   [NetworkName.Optimism]: "optimism",
   [NetworkName.Moonbeam]: "glmr",
   [NetworkName.Base]: "BASE",

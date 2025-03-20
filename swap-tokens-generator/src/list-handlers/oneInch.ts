@@ -12,7 +12,7 @@ export const supportedChains: NetworkName[] = [
   NetworkName.Gnosis,
   NetworkName.Avalanche,
   NetworkName.Fantom,
-  NetworkName.Klaytn,
+  NetworkName.Kaia,
   NetworkName.Aurora,
   NetworkName.ZkSync,
   NetworkName.Base,
@@ -33,10 +33,10 @@ export async function getOneInchTokens(
       addresses.forEach((addr) => {
         json.tokens[addr].type = CHAIN_CONFIGS[chainName].type;
       });
-      const map = new Map()
+      const map = new Map();
       for (const [address, token] of Object.entries(json.tokens)) {
-        map.set(address.toLowerCase() as Lowercase<string>, token)
+        map.set(address.toLowerCase() as Lowercase<string>, token);
       }
-      return map
+      return map;
     });
 }

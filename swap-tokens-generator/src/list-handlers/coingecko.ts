@@ -16,7 +16,7 @@ const cgPlatform: Record<NetworkName, string> = {
   [NetworkName.Aurora]: "aurora",
   [NetworkName.Fantom]: "fantom",
   [NetworkName.Gnosis]: "xdai",
-  [NetworkName.Klaytn]: "klay-token",
+  [NetworkName.Kaia]: "klay-token",
   [NetworkName.Optimism]: "optimistic-ethereum",
   [NetworkName.EthereumClassic]: "ethereum-classic",
   [NetworkName.Moonbeam]: "moonbeam",
@@ -37,7 +37,7 @@ export const supportedChains: NetworkName[] = [
   NetworkName.Gnosis,
   NetworkName.Avalanche,
   NetworkName.Fantom,
-  NetworkName.Klaytn,
+  NetworkName.Kaia,
   NetworkName.Aurora,
   NetworkName.EthereumClassic,
   NetworkName.Moonbeam,
@@ -62,7 +62,7 @@ export const getTrendingTokenId = async (): Promise<Map<string, number>> =>
       };
       const map: Map<string, number> = new Map();
       json.coins.forEach((coin) => {
-        map.set(coin.item.id, coin.item.score)
+        map.set(coin.item.id, coin.item.score);
       });
       return map;
     });
@@ -130,7 +130,7 @@ export const getContractAddressesToCG = async (): Promise<
       json.forEach((coin) => {
         const addresses = Object.values(coin.platforms);
         addresses.forEach((addr) => {
-          map.set(addr.toLowerCase() as Lowercase<string>, coin.id)
+          map.set(addr.toLowerCase() as Lowercase<string>, coin.id);
         });
       });
 
@@ -155,7 +155,9 @@ export const getCoinGeckoTopTokenInfo = async (): Promise<{
   };
 };
 
-export async function getCoinGeckoTokens(chainName: NetworkName): Promise<Map<Lowercase<string>, Token>> {
+export async function getCoinGeckoTokens(
+  chainName: NetworkName,
+): Promise<Map<Lowercase<string>, Token>> {
   return fetch(`${CG_BASE}${cgPlatform[chainName]}/all.json`)
     .then((res) => res.json())
     .then((_json) => {

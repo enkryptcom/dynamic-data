@@ -11,7 +11,7 @@ export enum NetworkName {
   Gnosis = "GNO",
   Avalanche = "AVAX",
   Fantom = "FTM",
-  Klaytn = "KLAY",
+  Kaia = "KAIA",
   Aurora = "AURORA",
   Moonbeam = "GLMR",
   ZkSync = "zkSync",

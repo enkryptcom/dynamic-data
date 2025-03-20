@@ -28,8 +28,8 @@ const CHAIN_CONFIGS: Record<NetworkName, ChainConfig> = {
     decimals: 18,
     logoURI:
       "https://tokens.1inch.io/0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0.png",
-    name: "MATIC",
-    symbol: "MATIC",
+    name: "Polygon POL",
+    symbol: "POL",
   },
   [NetworkName.Optimism]: {
     chainId: "10",
@@ -81,15 +81,15 @@ const CHAIN_CONFIGS: Record<NetworkName, ChainConfig> = {
     name: "Fantom Token",
     symbol: "FTM",
   },
-  [NetworkName.Klaytn]: {
+  [NetworkName.Kaia]: {
     chainId: "8217",
     type: NetworkType.EVM,
-    cgId: "klay-token",
+    cgId: "kaia",
     decimals: 18,
     logoURI:
-      "https://tokens.1inch.io/0xe4f05a66ec68b54a58b17c22107b02e0232cc817.png",
-    name: "Klaytn",
-    symbol: "KLAY",
+      "https://tokens-data.1inch.io/images/8217/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+    name: "Kaia",
+    symbol: "KAIA",
   },
   [NetworkName.Aurora]: {
     chainId: "1313161554",
