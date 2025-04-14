@@ -1,6 +1,21 @@
 {
   "versions": [
     {
+      "version": "2.5.0",
+      "chains_added": [
+        "Story",
+        "Abstract",
+        "Gravity",
+        "Unichain",
+        "Bera",
+        "Ink",
+        "Taraxa",
+        "Coti"
+      ],
+      "release_date": "2025-04-08",
+      "release_link": "https://github.com/enkryptcom/enKrypt/releases/tag/v2.5.0"
+    },
+    {
       "version": "2.2.0",
       "chains_added": ["SYS", "RLX", "Form", "5ire"],
       "release_date": "2025-01-29",
