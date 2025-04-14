@@ -8,7 +8,7 @@ export const supportedChains: NetworkName[] = [
   NetworkName.Binance,
   NetworkName.Matic,
   NetworkName.Avalanche,
-  NetworkName.Fantom,
+  // NetworkName.Fantom,
   NetworkName.Arbitrum,
   NetworkName.Optimism,
 ];
