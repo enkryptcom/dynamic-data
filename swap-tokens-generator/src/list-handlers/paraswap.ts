@@ -2,14 +2,14 @@ import { CHAIN_CONFIGS } from "@src/configs";
 import { NetworkName, Token } from "@src/types";
 
 const PARASWAP_BASE = `https://apiv5.paraswap.io/`;
-const TIMEOUT = 30_000
+const TIMEOUT = 30_000;
 
 export const supportedChains: NetworkName[] = [
   NetworkName.Ethereum,
   NetworkName.Binance,
   NetworkName.Matic,
   NetworkName.Avalanche,
-  NetworkName.Fantom,
+  // NetworkName.Fantom,
   NetworkName.Arbitrum,
   NetworkName.Base,
   NetworkName.Optimism,
@@ -18,34 +18,35 @@ export const supportedChains: NetworkName[] = [
 
 export async function getParaswapTokens(
   chainName: NetworkName,
-  abortable: Readonly<{ signal: AbortSignal, }>,
+  abortable: Readonly<{ signal: AbortSignal }>,
 ): Promise<Map<Lowercase<string>, Token>> {
-  const url = `${PARASWAP_BASE}tokens/${CHAIN_CONFIGS[chainName].chainId}`
+  const url = `${PARASWAP_BASE}tokens/${CHAIN_CONFIGS[chainName].chainId}`;
   const res = await fetch(url, {
     signal: AbortSignal.any([AbortSignal.timeout(TIMEOUT), abortable.signal]),
-    headers: [
-      ['Accept', 'application/json'],
-    ],
-  })
+    headers: [["Accept", "application/json"]],
+  });
 
   if (!res.ok) {
-    let text = await res.text().catch(err => `! Failed to decode response text: ${err}`)
-    const len = text.length
-    if (len > (512 + 10 + len.toString().length)) text = `${text.slice(0, 512)}... (512/${len})`
+    let text = await res
+      .text()
+      .catch((err) => `! Failed to decode response text: ${err}`);
+    const len = text.length;
+    if (len > 512 + 10 + len.toString().length)
+      text = `${text.slice(0, 512)}... (512/${len})`;
     throw new Error(
-      `Failed to fetch Paraswap tokens for ${chainName} with`
-      + ` ${res.status} ${res.statusText} at ${url} ${text}`
-    )
+      `Failed to fetch Paraswap tokens for ${chainName} with` +
+        ` ${res.status} ${res.statusText} at ${url} ${text}`,
+    );
   }
 
-  const json = await res.json() as {
+  const json = (await res.json()) as {
     tokens: {
       symbol: string;
       address: string;
       decimals: number;
       img: string;
     }[];
-  }
+  };
 
   const map: Map<Lowercase<string>, Token> = new Map();
   for (const token of json.tokens) {
@@ -60,7 +61,7 @@ export async function getParaswapTokens(
       logoURI: token.img,
       name: token.symbol,
       symbol: token.symbol,
-    })
+    });
   }
   return map;
 }
