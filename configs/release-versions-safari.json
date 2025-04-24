@@ -1,6 +1,12 @@
 {
   "versions": [
     {
+      "version": "2.6.0",
+      "description": "Oh Hi there, Fancy meeting you here in the notes. Smart one aren't ya? Well we are just here squashing some bugs and making things even better for you in Enkrypt. Spring cleaning if you will. How about those tariffs in the USA? Crazy volatility right? Anyway, hope you and your bags are well.",
+      "release_date": "2025-04-24",
+      "release_link": "https://github.com/enkryptcom/enKrypt/releases/tag/v2.6.0"
+    },
+    {
       "version": "2.5.0",
       "chains_added": [
         "Story",
