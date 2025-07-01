@@ -1,5 +1,34 @@
 {
   "versions": [
+    { 
+      "version": "2.9.0",
+      "release_date": "2025-06-30",
+      "release_link": "https://github.com/enkryptcom/enKrypt/releases/tag/v2.9.0",
+      "chains_added": [
+        "Sonic"
+      ],
+    },
+    { 
+      "version": "2.8.0",
+      "release_date": "2025-06-04",
+      "release_link": "https://github.com/enkryptcom/enKrypt/releases/tag/v2.8.0"
+      "chains_added": [
+        "Hemi"
+      ],
+    },
+    { 
+      "version": "2.7.0",
+      "chains_added": [
+        "Cytonic",
+        "Derive",
+        "Conflux",
+        "Unit Zero",
+        "Unit Zero Testnet",
+        "Cytonic Testnet"
+      ],
+      "release_date": "2025-05-19",
+      "release_link": "https://github.com/enkryptcom/enKrypt/releases/tag/v2.7.0"
+    },
     {
       "version": "2.6.0",
       "description": "Oh Hi there, Fancy meeting you here in the notes. Smart one aren't ya? Well we are just here squashing some bugs and making things even better for you in Enkrypt. Spring cleaning if you will. How about those tariffs in the USA? Crazy volatility right? Anyway, hope you and your bags are well.",
