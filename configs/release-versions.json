@@ -19,12 +19,10 @@
     { 
       "version": "2.7.0",
       "chains_added": [
-        "Cytonic",
-        "Derive",
+        "derive",
         "Conflux",
-        "Unit Zero",
-        "Unit Zero Testnet",
-        "Cytonic Testnet"
+        "UnitZero",
+        "CytonicTestnet"
       ],
       "release_date": "2025-05-19",
       "release_link": "https://github.com/enkryptcom/enKrypt/releases/tag/v2.7.0"
