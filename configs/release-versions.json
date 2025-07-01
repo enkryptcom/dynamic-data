@@ -6,12 +6,12 @@
       "release_link": "https://github.com/enkryptcom/enKrypt/releases/tag/v2.9.0",
       "chains_added": [
         "Sonic"
-      ],
+      ]
     },
     { 
       "version": "2.8.0",
       "release_date": "2025-06-04",
-      "release_link": "https://github.com/enkryptcom/enKrypt/releases/tag/v2.8.0"
+      "release_link": "https://github.com/enkryptcom/enKrypt/releases/tag/v2.8.0",
       "chains_added": [
         "Hemi"
       ],
@@ -19,7 +19,7 @@
     { 
       "version": "2.7.0",
       "chains_added": [
-        "derive",
+        "Derive",
         "Conflux",
         "UnitZero",
         "CytonicTestnet"
