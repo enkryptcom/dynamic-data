@@ -1,29 +1,26 @@
 {
   "versions": [
-    { 
+    {
+      "version": "2.10.0",
+      "chains_added": ["CORE", "Hoodi", "AppLayerTestnet"],
+      "release_date": "2025-08-07",
+      "release_link": "https://github.com/enkryptcom/enKrypt/releases/tag/v2.10.0"
+    },
+    {
       "version": "2.9.0",
       "release_date": "2025-06-30",
       "release_link": "https://github.com/enkryptcom/enKrypt/releases/tag/v2.9.0",
-      "chains_added": [
-        "SONIC"
-      ]
+      "chains_added": ["SONIC"]
     },
-    { 
+    {
       "version": "2.8.0",
       "release_date": "2025-06-04",
       "release_link": "https://github.com/enkryptcom/enKrypt/releases/tag/v2.8.0",
-      "chains_added": [
-        "Hemi"
-      ]
+      "chains_added": ["Hemi"]
     },
-    { 
+    {
       "version": "2.7.0",
-      "chains_added": [
-        "derive",
-        "Conflux",
-        "UnitZero",
-        "CytonicTestnet"
-      ],
+      "chains_added": ["derive", "Conflux", "UnitZero", "CytonicTestnet"],
       "release_date": "2025-05-19",
       "release_link": "https://github.com/enkryptcom/enKrypt/releases/tag/v2.7.0"
     },
