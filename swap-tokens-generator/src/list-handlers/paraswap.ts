@@ -13,7 +13,7 @@ export const supportedChains: NetworkName[] = [
   NetworkName.Arbitrum,
   NetworkName.Base,
   NetworkName.Optimism,
-  NetworkName.MaticZK,
+  // NetworkName.MaticZK,
 ];
 
 export async function getParaswapTokens(
