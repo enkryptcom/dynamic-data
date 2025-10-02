@@ -7,13 +7,6 @@
     "image": "https://polkadot.js.org/docs/img/logo.svg"
   },
   {
-    "title": "EdgeApps",
-    "link": "https://edgeware.app/",
-    "description": "Customised fork of Polkadot.js for the Edgeverse!",
-    "isFavorites": false,
-    "image": "https://www.edgeware.app/static/edgeware-white.08fe471b..png"
-  },
-  {
     "title": "Governance Forum",
     "link": "https://gov.edgewa.re/",
     "description": "All-in-one platform for on-chain communities to discuss, vote, and fund projects together.",
