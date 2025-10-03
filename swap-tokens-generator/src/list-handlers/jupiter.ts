@@ -8,7 +8,7 @@ const TIMEOUT = 30_000;
 // @see App: https://jup.ag/
 // @see Documentation: https://station.jup.ag/docs/
 
-const JUPITER_BASE = `https://tokens.jup.ag/`;
+const JUPITER_BASE = `https://lite-api.jup.ag/`;
 
 type JupiterToken = {
   /** @example "AVWsE5PJv3oZPzmurvD6cSwvS1x7bPhj1nFz2LMHFxoK" */
@@ -53,8 +53,8 @@ async function requestJupiter(
       if (retryidx >= RETRIES.length) {
         throw new Error(
           `Failed to get Jupiter tokens, exceeded max retry attempts` +
-          ` ${retryidx}/${RETRIES.length}. Last error:` +
-          ` ${String(errRef?.err ?? "???")}`,
+            ` ${retryidx}/${RETRIES.length}. Last error:` +
+            ` ${String(errRef?.err ?? "???")}`,
         );
       }
 
@@ -67,7 +67,7 @@ async function requestJupiter(
           "retries",
           retryidx,
         );
-        await new Promise<void>(function(res, rej) {
+        await new Promise<void>(function (res, rej) {
           function onTimeout() {
             cleanupTimeout();
             res();
@@ -94,12 +94,13 @@ async function requestJupiter(
       }
 
       // Send HTTP request for jupiter tokens
-      const url = `${JUPITER_BASE}tokens?tags=verified`
+      const url = `${JUPITER_BASE}tokens/v2/tag?query=verified`;
       const res = await fetch(url, {
-        signal: AbortSignal.any([AbortSignal.timeout(TIMEOUT), abortable.signal]),
-        headers: [
-          ["Accept", "application/json"],
-        ],
+        signal: AbortSignal.any([
+          AbortSignal.timeout(TIMEOUT),
+          abortable.signal,
+        ]),
+        headers: [["Accept", "application/json"]],
       });
 
       // Response has fail status?
@@ -113,7 +114,7 @@ async function requestJupiter(
         }
         throw new Error(
           `HTTP request to get Jupiter tokens failed with` +
-          ` ${res.status} ${res.statusText} ${url} ${msg}`,
+            ` ${res.status} ${res.statusText} ${url} ${msg}`,
         );
       }
 
