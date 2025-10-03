@@ -25,6 +25,13 @@ import { Logger, LogLevel } from "./logger";
 import { getRangoTokens, mergeRangoEnkryptTokens, RangoEnkryptToken } from "./list-handlers/rango";
 // import Rango from 'rango';
 
+function wtimeout<T extends { signal?: AbortSignal, }>(abortable: T, ms: number): T {
+  const o = Object.create(abortable) as T
+  if (o.signal) o.signal = AbortSignal.any([AbortSignal.timeout(ms), o.signal])
+  else o.signal = AbortSignal.timeout(ms)
+  return o
+}
+
 const runner = async () => {
   const logger = new Logger({ level: LogLevel.TRACE });
   const aborter = new AbortController();
@@ -68,6 +75,7 @@ const runner = async () => {
         }
         const timeout = setTimeout(onTimeout, 1_000);
         abortable.signal.addEventListener("abort", onAbort);
+        if (abortable.signal.aborted) onAbort()
       });
     }
     const chain = cgSupportedChains[i];
@@ -86,6 +94,8 @@ const runner = async () => {
     "Fetching 1inch tokens",
     "networks", oneInchSupportedChains.length,
   );
+  let oneInchSuccesses = 0
+  let oneInchTries = 0
   for (let i = 0, len = oneInchSupportedChains.length; i < len; i++) {
     const chain = oneInchSupportedChains[i];
     logger.sinfo(
@@ -94,8 +104,22 @@ const runner = async () => {
       "len", len,
       "chain", chain,
     );
-    const result = await getOneInchTokens(chain);
-    oneInchTokens.set(chain, result);
+    try {
+      oneInchTries++
+      const result = await getOneInchTokens(logger, chain, wtimeout(abortable, 120_000));
+      oneInchTokens.set(chain, result);
+      oneInchSuccesses += 1
+    } catch (err) {
+      logger.swarn(`Failed to fetch 1Inch tokens for ${chain}: ${String(err)}`);
+    }
+  }
+  // Make sure at least half succeeded...
+  if (oneInchSuccesses < (oneInchTries / 2)) {
+    // Too main failures getting 1inch tokens
+    throw new Error(`Aborting due to too many 1Inch token fetch failures, only succeeded for ${oneInchSuccesses}/${oneInchSupportedChains.length} chains`);
+  }
+  if (oneInchTries !== oneInchSuccesses) {
+    logger.sinfo(`Continuing with some 1Inch token fetch failures, succeeded for ${oneInchSuccesses}/${oneInchSupportedChains.length} chains`);
   }
 
   // Load ParaSwap tokens for each chain
@@ -111,7 +135,7 @@ const runner = async () => {
       "len", len,
       "chain", chain,
     );
-    const data = await getParaswapTokens(chain, abortable);
+    const data = await getParaswapTokens(chain, wtimeout(abortable, 120_000));
     paraswapTokens.set(chain, data);
   }
 
@@ -121,15 +145,15 @@ const runner = async () => {
 
   logger.info("Fetching Changelly tokens");
   /** All tokens fetched from Changelly */
-  let changellyTokens = await changelly(abortable);
+  let changellyTokens = await changelly(wtimeout(abortable, 120_000));
 
   logger.info("Fetching Rango tokens");
   /** All tokens fetched from Changelly */
-  const rangoTokenMetas = await getRangoTokens(abortable);
+  const rangoTokenMetas = await getRangoTokens(wtimeout(abortable, 120_000));
 
   // Load Jupiter tokens
   logger.info(`Fetching Jupiter tokens`);
-  jupiterTokens.set(NetworkName.Solana, await requestJupiter(logger, abortable));
+  jupiterTokens.set(NetworkName.Solana, await requestJupiter(logger, wtimeout(abortable, 120_000)));
 
   logger.info("Fetching ParaSwap Pricefeed");
   /** Token prices fetched from Paraswap */
@@ -269,7 +293,7 @@ const runner = async () => {
     // For any tokens we couldn't find prices for, get their prices from EthVM instead
     /** CoinGecko id -> current price USD */
     if (priceMissingIds.length) {
-      const pricesFound = await getEthVMPriceByIDs(logger, priceMissingIds, abortable);
+      const pricesFound = await getEthVMPriceByIDs(logger, priceMissingIds, wtimeout(abortable, 120_000));
       for (const [cgid, price] of pricesFound) {
         ethvmPrices.set(cgid, price);
       }
