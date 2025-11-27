@@ -27,55 +27,55 @@ export async function getEthVMPriceByIDs(
     let errref: undefined | { err: Error };
     let retryidx = 0;
     retires: while (true) {
+      if (retryidx >= RETRIES.length) {
+        logger.swarn(
+          `Exceeded maximum number of attempts trying to fetch CoinGecko price data from EthVM`,
+          "chunkSize", chunkSize,
+          "chunkidx", chunkidx,
+          "idcount", idcount,
+          "retries", retryidx,
+        );
+        throw errref!.err;
+      }
+      if (RETRIES[retryidx]) {
+        logger.sdebug(
+          `Waiting before retrying fetch CoinGecko price data from EthVM`,
+          "after", `${RETRIES[retryidx]}ms`,
+          "chunkSize", chunkSize,
+          "chunkidx", chunkidx,
+          "idcount", idcount,
+          "retries", retryidx,
+        );
+        await new Promise<void>(function(res, rej) {
+          function onTimeout() {
+            cleanupTimeout();
+            res();
+          }
+          function onAbortTimeout() {
+            cleanupTimeout();
+            rej(abortable.signal.reason);
+          }
+          function cleanupTimeout() {
+            clearTimeout(timeout);
+            abortable.signal.removeEventListener("abort", onAbortTimeout);
+          }
+          const timeout = setTimeout(onTimeout, RETRIES[retryidx]);
+          abortable.signal.addEventListener("abort", onAbortTimeout);
+        });
+      }
+
+      if (retryidx > 0) {
+        logger.sinfo(
+          `Retrying fetch CoinGecko price data from EthVM`,
+          "after", `${RETRIES[retryidx]}ms`,
+          "chunkSize", chunkSize,
+          "chunkidx", chunkidx,
+          "idcount", idcount,
+          "retries", retryidx,
+        );
+      }
+
       try {
-        if (retryidx >= RETRIES.length) {
-          logger.swarn(
-            `Exceeded maximum number of attempts trying to fetch CoinGecko price data from EthVM`,
-            "chunkSize", chunkSize,
-            "chunkidx", chunkidx,
-            "idcount", idcount,
-            "retries", retryidx,
-          );
-          throw errref!.err;
-        }
-        if (RETRIES[retryidx]) {
-          logger.sdebug(
-            `Waiting before retrying fetch CoinGecko price data from EthVM`,
-            "after", `${RETRIES[retryidx]}ms`,
-            "chunkSize", chunkSize,
-            "chunkidx", chunkidx,
-            "idcount", idcount,
-            "retries", retryidx,
-          );
-          await new Promise<void>(function(res, rej) {
-            function onTimeout() {
-              cleanupTimeout();
-              res();
-            }
-            function onAbortTimeout() {
-              cleanupTimeout();
-              rej(abortable.signal.reason);
-            }
-            function cleanupTimeout() {
-              clearTimeout(timeout);
-              abortable.signal.removeEventListener("abort", onAbortTimeout);
-            }
-            const timeout = setTimeout(onTimeout, RETRIES[retryidx]);
-            abortable.signal.addEventListener("abort", onAbortTimeout);
-          });
-        }
-
-        if (retryidx > 0) {
-          logger.sinfo(
-            `Retrying fetch CoinGecko price data from EthVM`,
-            "after", `${RETRIES[retryidx]}ms`,
-            "chunkSize", chunkSize,
-            "chunkidx", chunkidx,
-            "idcount", idcount,
-            "retries", retryidx,
-          );
-        }
-
         const res = await fetch(ETHVM_BASE, {
           method: "POST",
           signal: AbortSignal.any([AbortSignal.timeout(TIMEOUT), abortable.signal]),
