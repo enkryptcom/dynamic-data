@@ -130,7 +130,7 @@ query ($ids: [String!]!) {
     if (result.errors && result.errors.length) {
       let msg = result.errors.map((err: any) => String(err?.message ?? '???')).join(', ')
       const len = msg.length
-      if (len > 512 + 10 + len.toString().length) msg = `${msg.slice(0, 512)}... (512/${len})`
+      if (len > 2048 + 11 + len.toString().length) msg = `${msg.slice(0, 2048)}... (2048/${len})`
       throw new Error(
         `Failed to fetch CoinGecko price data from EthVM: ${len} GraphQL error/s: ${msg}`
       )
@@ -138,8 +138,7 @@ query ($ids: [String!]!) {
 
     if (result.data.getCoinGeckoTokenMarketDataByIds.length !== chunkSize) {
       let text = JSON.stringify(result);
-      if (text.length > 512 + 10)
-        text = text.slice(0, 512) + `... (512/${text.length})`;
+      if (text.length > 2048 + 11) text = text.slice(0, 2048) + `... (2048/${text.length})`;
       throw new Error(
         `Failed to fetch CoinGecko price data from EthVM: Token count mismatch` +
         ` ${result.data.getCoinGeckoTokenMarketDataByIds.length} !== ${chunkSize}.` +
