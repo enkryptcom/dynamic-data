@@ -76,52 +76,52 @@ async function requestJupiter(
   let retryidx = 0;
   let errRef: undefined | { err: Error };
   retries: while (true) {
+    // Exceeded retries
+    if (retryidx >= RETRIES.length) {
+      throw new Error(
+        `Failed to get Jupiter tokens, exceeded max retry attempts` +
+        ` ${retryidx}/${RETRIES.length}. Last error:` +
+        ` ${String(errRef?.err ?? "???")}`,
+      );
+    }
+
+    // Wait before retrying
+    if (RETRIES[retryidx]) {
+      logger.sdebug(
+        `Waiting before retrying request for Jupiter tokens`,
+        "after",
+        `${RETRIES[retryidx]}ms`,
+        "retries",
+        retryidx,
+      );
+      await new Promise<void>(function(res, rej) {
+        function onTimeout() {
+          cleanupTimeout();
+          res();
+        }
+        function onAbortTimeout() {
+          cleanupTimeout();
+          rej(abortable.signal.reason);
+        }
+        function cleanupTimeout() {
+          clearTimeout(timeout);
+          abortable.signal.removeEventListener("abort", onAbortTimeout);
+        }
+        const timeout = setTimeout(onTimeout, RETRIES[retryidx]);
+        abortable.signal.addEventListener("abort", onAbortTimeout);
+        if (abortable.signal.aborted) onAbortTimeout();
+      });
+    }
+
+    if (retryidx > 0) {
+      logger.sinfo(
+        "Retrying request for Jupiter tokens",
+        "retries",
+        retryidx,
+      );
+    }
+
     try {
-      // Exceeded retries
-      if (retryidx >= RETRIES.length) {
-        throw new Error(
-          `Failed to get Jupiter tokens, exceeded max retry attempts` +
-          ` ${retryidx}/${RETRIES.length}. Last error:` +
-          ` ${String(errRef?.err ?? "???")}`,
-        );
-      }
-
-      // Wait before retrying
-      if (RETRIES[retryidx]) {
-        logger.sdebug(
-          `Waiting before retrying request for Jupiter tokens`,
-          "after",
-          `${RETRIES[retryidx]}ms`,
-          "retries",
-          retryidx,
-        );
-        await new Promise<void>(function(res, rej) {
-          function onTimeout() {
-            cleanupTimeout();
-            res();
-          }
-          function onAbortTimeout() {
-            cleanupTimeout();
-            rej(abortable.signal.reason);
-          }
-          function cleanupTimeout() {
-            clearTimeout(timeout);
-            abortable.signal.removeEventListener("abort", onAbortTimeout);
-          }
-          const timeout = setTimeout(onTimeout, RETRIES[retryidx]);
-          abortable.signal.addEventListener("abort", onAbortTimeout);
-          if (abortable.signal.aborted) onAbortTimeout();
-        });
-      }
-
-      if (retryidx > 0) {
-        logger.sinfo(
-          "Retrying request for Jupiter tokens",
-          "retries",
-          retryidx,
-        );
-      }
-
       // Send HTTP request for jupiter tokens
       const url = `${JUPITER_BASE}tokens/v2/tag?query=verified`;
       const res = await fetch(url, {
