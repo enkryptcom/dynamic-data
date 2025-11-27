@@ -127,7 +127,6 @@ export const getContractAddressesToCG = async (): Promise<
       const map: Map<Lowercase<string>, string> = new Map();
 
       // Extract the map
-      console.log("Processing CoinGecko contract address mapping...", json);
       json.forEach((coin) => {
         const addresses = Object.values(coin.platforms);
         addresses.forEach((addr) => {
