@@ -100,7 +100,7 @@ query ($ids: [String!]!) {
         if (!res.ok) {
           let text = await res.text().catch((err) => `! Failed to decode response text: ${err}`);
           const len = text.length;
-          if (len > 512 + 10 + len.toString().length) text = text.slice(0, 512) + `... (512/${len})`;
+          if (len > 2048 + 11 + len.toString().length) text = text.slice(0, 2048) + `... (2048/${len})`;
           let idsText: string;
           if (chunkSize > 10) idsText = chunk.slice(0, 10).join(", ") + `... (10/${chunkSize})`;
           else idsText = chunk.join(", ");
