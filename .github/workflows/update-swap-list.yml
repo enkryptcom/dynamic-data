@@ -20,8 +20,13 @@ jobs:
       - run: cd swap-tokens-generator && yarn install --frozen-lockfile && yarn run build
       - run: cd swap-tokens-generator && yarn run update:lists
       - run: cd swap-tokens-generator && mv dist/lists/*.json ../swaplists
+      - name: Fetch and update RWA addresses
+        run: |
+          curl -sf "https://partners.mewapi.io/o/api/v1/assets/all/addresses" \
+            | jq '[.[].addresses[].address]' \
+            > configs/filtered-rwa-addresses.json
       - uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actions
           message: "swap list updated"
-          add: "swaplists/*.json"
+          add: "swaplists/*.json configs/filtered-rwa-addresses.json"
