@@ -22,7 +22,8 @@ jobs:
       - run: cd swap-tokens-generator && mv dist/lists/*.json ../swaplists
       - name: Fetch and update RWA addresses
         run: |
-          curl -sf "https://partners.mewapi.io/o/api/v1/assets/all/addresses" \
+          curl -sf -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" \
+            "https://partners.mewapi.io/o/api/v1/assets/all/addresses" \
             | jq '[.[].addresses[].address]' \
             > configs/filtered-rwa-addresses.json
       - uses: EndBug/add-and-commit@v9
